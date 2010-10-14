@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xrdb -merge ~/.Xdefaults
+xcompmgr &
+hsetroot -full ~/Pictures/ka-carbon.png
+
+exec ck-launch-session dwm
