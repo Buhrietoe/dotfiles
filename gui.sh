@@ -6,6 +6,9 @@ case $ARG in
 "gnome" )
 `cp -f ~/xguis/.xinitrc_gnome ~/.xinitrc`
 ;;
+"kde" )
+`cp -f ~/xguis/.xinitrc_kde ~/.xinitrc`
+;;
 "dwm" )
 `cp -f ~/xguis/.xinitrc_dwm ~/.xinitrc`
 ;;
