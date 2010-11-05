@@ -1,0 +1,22 @@
+[user]
+	name = Jason Gardner
+	email = buhrietoe@gmail.com
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+  interactive = auto
+
+[merge]
+  tool = vimdiff
+  log = true
+
+[push]
+  default = current
+
+[help]
+  autocorrect = 1
+
+[alias]
+  st = status
