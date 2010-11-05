@@ -1,0 +1,12 @@
+! Font config
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! XTerm config
+XTerm*Foreground: white
+XTerm*Background: black
+XTerm*Font: -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*

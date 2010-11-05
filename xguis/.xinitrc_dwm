@@ -1,7 +1,7 @@
 #!/bin/sh
 
-xrdb -merge ~/.Xdefaults
-xcompmgr &
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+xcompmgr -n -c -C -f -F -t-5 -l-5 -r4.2 -o.5 2>/dev/null &
 hsetroot -full ~/Pictures/ka-carbon.png
 
 exec ck-launch-session dwm
