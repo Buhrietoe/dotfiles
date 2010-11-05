@@ -7,7 +7,6 @@ alias .....='cd ../../../..'
 alias ls='ls --color=auto'
 alias l='ls -AFhl'
 export TERM='xterm'
-export DISPLAY=':0.0'
 export EDITOR='vim'
 
 # Prompt colors
