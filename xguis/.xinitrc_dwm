@@ -2,6 +2,6 @@
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xcompmgr -n -c -C -f -F -t-5 -l-5 -r4.2 -o.5 2>/dev/null &
-hsetroot -full ~/Pictures/paisley-dwm-1920x1200.png
+hsetroot -fill ~/Pictures/paisley-dwm-1920x1200.png
 
 exec ck-launch-session dwm
