@@ -20,3 +20,9 @@
 
 [alias]
   st = status
+  co = checkout
+  br = branch
+
+[branch "master"]
+  remote = origin
+  merge = master
