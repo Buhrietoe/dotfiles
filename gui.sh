@@ -12,6 +12,9 @@ case $ARG in
 "dwm" )
 `cp -f ~/xguis/.xinitrc_dwm ~/.xinitrc`
 ;;
+"s" )
+`cp -f ~/xguis/.xinitrc_scrotwm ~/.xinitrc`
+;;
 ** )
 echo
 echo "Not a valid option."
