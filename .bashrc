@@ -6,6 +6,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ls='ls --color=auto'
 alias l='ls -AFhl'
+alias t='tail -f /var/log/messages.log'
 export TERM='xterm'
 export EDITOR='vim'
 
