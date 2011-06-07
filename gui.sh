@@ -3,17 +3,17 @@
 ARG=$1
 
 case $ARG in
-"gnome" )
+"g" )
 `cp -f ~/xguis/.xinitrc_gnome ~/.xinitrc`
 ;;
-"kde" )
+"k" )
 `cp -f ~/xguis/.xinitrc_kde ~/.xinitrc`
-;;
-"dwm" )
-`cp -f ~/xguis/.xinitrc_dwm ~/.xinitrc`
 ;;
 "s" )
 `cp -f ~/xguis/.xinitrc_scrotwm ~/.xinitrc`
+;;
+"l" )
+`cp -f ~/xguis/.xinitrc_lxde ~/.xinitrc`
 ;;
 ** )
 echo

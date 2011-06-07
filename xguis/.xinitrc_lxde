@@ -1,0 +1,7 @@
+#!/bin/sh
+
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+# xcompmgr -n -c -C -f -F -D10 -t-5 -l-5 -r4.2 -o.5 2>/dev/null &
+mpd ~/.mpd/mpd.conf
+
+exec ck-launch-session startlxde
