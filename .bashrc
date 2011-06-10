@@ -8,7 +8,7 @@ alias ls='ls --color=auto'
 alias l='ls -AFhl --group-directories-first'
 alias t='tail -f /var/log/messages.log'
 alias xz='pxz'
-alias pacman='pacman-color'
+#alias pacman='pacman-color'
 export TERM='xterm'
 export EDITOR='vim'
 
