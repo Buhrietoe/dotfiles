@@ -10,7 +10,7 @@ case $ARG in
 `cp -f ~/xguis/.xinitrc_kde ~/.xinitrc`
 ;;
 "s" )
-`cp -f ~/xguis/.xinitrc_scrotwm ~/.xinitrc`
+`cp -f ~/xguis/.xinitrc_spectrwm ~/.xinitrc`
 ;;
 ** )
 echo
