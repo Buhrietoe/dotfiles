@@ -12,6 +12,9 @@ case $ARG in
 "s" )
 `cp -f ~/xguis/.xinitrc_spectrwm ~/.xinitrc`
 ;;
+"l" )
+`cp -f ~/xguis/.xinitrc_lxde ~/.xinitrc`
+;;
 ** )
 echo
 echo "Not a valid option."
