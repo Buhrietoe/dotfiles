@@ -10,6 +10,7 @@ alias t='tail -f /var/log/messages.log'
 alias pacup='sudo pacman -Syu'
 export TERM='xterm'
 export EDITOR='vim'
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # Prompt colors
 CLR_GRAY='\[\e[30;1m\]'
