@@ -4,16 +4,16 @@ ARG=$1
 
 case $ARG in
 "g" )
-`cp -f ~/xguis/.xinitrc_gnome ~/.xinitrc`
+`cp -f ~/scripts/xguis/.xinitrc_gnome ~/.xinitrc`
 ;;
 "k" )
-`cp -f ~/xguis/.xinitrc_kde ~/.xinitrc`
+`cp -f ~/scripts/xguis/.xinitrc_kde ~/.xinitrc`
 ;;
 "s" )
-`cp -f ~/xguis/.xinitrc_spectrwm ~/.xinitrc`
+`cp -f ~/scripts/xguis/.xinitrc_spectrwm ~/.xinitrc`
 ;;
 "l" )
-`cp -f ~/xguis/.xinitrc_lxde ~/.xinitrc`
+`cp -f ~/scripts/xguis/.xinitrc_lxde ~/.xinitrc`
 ;;
 ** )
 echo
