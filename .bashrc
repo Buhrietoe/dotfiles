@@ -12,7 +12,7 @@ export TERM='xterm'
 export EDITOR='vim'
 PATH=~/scripts:$PATH
 export PATH
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+#xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # Prompt colors
 CLR_GRAY='\[\e[30;1m\]'
