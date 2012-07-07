@@ -339,7 +339,7 @@
         <command>amixer -q set Master toggle</command>
       </action>
     </keybind>
-    <!-- Keybindings for app launching -->
+    <!-- Custom Keybindings -->
     <keybind key="A-p">
       <action name="Execute">
         <command>~/scripts/dmenu-launch.sh</command>
@@ -347,7 +347,7 @@
     </keybind>
     <keybind key="A-Return">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>xterm</command>
       </action>
     </keybind>
     <keybind key="W-l">
