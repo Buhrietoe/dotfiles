@@ -1,2 +1,2 @@
 #!/bin/sh
-dmenu_run -b -i -nb "#500000" -nf "#ffffff"
+dmenu_run -l 5 -i -nb "#500000" -nf "#ffffff"
