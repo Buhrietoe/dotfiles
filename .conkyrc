@@ -4,4 +4,4 @@ update_interval 1.0
 total_run_times 0
 use_spacer none
 TEXT
-| Temp:${acpitemp}C | ${addr wlan0} | RAM:$memperc% | CPU:${cpu}%
+BATT: ${battery_short BAT1}    Temp: ${acpitemp}C    NET: W-${addr wlan0} L-${addr eth0}    RAM: $memperc%    CPU: ${cpu}%    HD: R-${diskio_read sda} W-${diskio_write sda}
