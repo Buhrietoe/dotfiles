@@ -2,4 +2,4 @@
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-exec ck-launch-session startlxde
+exec startlxde
