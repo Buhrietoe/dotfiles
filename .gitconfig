@@ -1,11 +1,11 @@
 [user]
-	name = Jason Gardner
-	email = buhrietoe@gmail.com
+  name = Jason Gardner
+  email = buhrietoe@gmail.com
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
   interactive = auto
 
 [merge]
