@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# bash options
+set -b
+set -o vi
+
+# aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -15,9 +20,10 @@ alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias xx='exit'
 export TERM='xterm'
 export EDITOR='vim'
+
+# modify path to include home scripts
 PATH=~/scripts:$PATH
 export PATH
-#xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # Prompt colors
 CLR_GRAY='\[\e[30;1m\]'
