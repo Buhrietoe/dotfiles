@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<menu id="2" label="Editors">
+			<item label="Vim">
+				<action name="Execute">
+					<execute>xterm -e vim</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="18" label="Games">
+			<menu id="9" label="Adventure">
+				<item label="Sclient">
+					<action name="Execute">
+						<execute>sclient</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="10" label="Arcade">
+				<item label="PacMan">
+					<action name="Execute">
+						<execute>pacman</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="6" label="Graphics">
+			<item label="Feh">
+				<action name="Execute">
+					<execute>feh</execute>
+				</action>
+			</item>
+			<item label="Image Viewer">
+				<action name="Execute">
+					<execute>gpicview</execute>
+				</action>
+			</item>
+			<item label="The GIMP">
+				<action name="Execute">
+					<execute>gimp</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="7" label="Multimedia">
+			<item label="ALSA mixer">
+				<action name="Execute">
+					<execute>xterm -e alsamixer</execute>
+				</action>
+			</item>
+			<item label="Music Player">
+				<action name="Execute">
+					<execute>lxmusic</execute>
+				</action>
+			</item>
+			<item label="VLC media player">
+				<action name="Execute">
+					<execute>vlc</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="5" label="Network">
+			<item label="Avahi SSH Server Browser">
+				<action name="Execute">
+					<execute>bssh</execute>
+				</action>
+			</item>
+			<item label="Avahi VNC Server Browser">
+				<action name="Execute">
+					<execute>bvnc</execute>
+				</action>
+			</item>
+			<item label="FireFox">
+				<action name="Execute">
+					<execute>firefox</execute>
+				</action>
+			</item>
+			<item label="FTP">
+				<action name="Execute">
+					<execute>xterm -e ftp</execute>
+				</action>
+			</item>
+			<item label="Mail">
+				<action name="Execute">
+					<execute>xterm -e mail</execute>
+				</action>
+			</item>
+			<item label="Talk">
+				<action name="Execute">
+					<execute>xterm -e talk</execute>
+				</action>
+			</item>
+			<item label="Telnet">
+				<action name="Execute">
+					<execute>xterm -e telnet</execute>
+				</action>
+			</item>
+			<item label="TkVNC">
+				<action name="Execute">
+					<execute>xterm -e tkvnc</execute>
+				</action>
+			</item>
+			<item label="Zenmap">
+				<action name="Execute">
+					<execute>zenmap</execute>
+				</action>
+			</item>
+			<item label="Zenmap (as root)">
+				<action name="Execute">
+					<execute>/usr/share/zenmap/su-to-zenmap.sh</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="19" label="Shells">
+			<item label="File Manager PCManFM">
+				<action name="Execute">
+					<execute>pcmanfm</execute>
+				</action>
+			</item>
+			<item label="GIT">
+				<action name="Execute">
+					<execute>xterm -e git</execute>
+				</action>
+			</item>
+			<item label="LXTerminal">
+				<action name="Execute">
+					<execute>lxterminal</execute>
+				</action>
+			</item>
+			<item label="UXTerm">
+				<action name="Execute">
+					<execute>uxterm</execute>
+				</action>
+			</item>
+			<item label="Xterm">
+				<action name="Execute">
+					<execute>xterm</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="37" label="System">
+			<menu id="36" label="Settings">
+				<menu id="21" label="GNOME">
+					<item label="Adobe Flash Player">
+						<action name="Execute">
+							<execute>flash-player-properties</execute>
+						</action>
+					</item>
+				</menu>
+				<menu id="35" label="Xfce">
+					<item label="Screensaver">
+						<action name="Execute">
+							<execute>xscreensaver-demo</execute>
+						</action>
+					</item>
+				</menu>
+				<item label="Customize Look and Feel">
+					<action name="Execute">
+						<execute>lxappearance</execute>
+					</action>
+				</item>
+				<item label="Desktop Preferences">
+					<action name="Execute">
+						<execute>pcmanfm --desktop-pref</execute>
+					</action>
+				</item>
+				<item label="Java">
+					<action name="Execute">
+						<execute>jcontrol</execute>
+					</action>
+				</item>
+				<item label="Java Policy Settings">
+					<action name="Execute">
+						<execute>policytool</execute>
+					</action>
+				</item>
+				<item label="Keyboard and Mouse">
+					<action name="Execute">
+						<execute>lxinput</execute>
+					</action>
+				</item>
+				<item label="Monitor Settings">
+					<action name="Execute">
+						<execute>lxrandr</execute>
+					</action>
+				</item>
+				<item label="NVIDIA X Server Settings">
+					<action name="Execute">
+						<execute>nvidia-settings</execute>
+					</action>
+				</item>
+				<item label="Openbox Configuration Manager">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="Preferred Applications">
+					<action name="Execute">
+						<execute>libfm-pref-apps</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Avahi Zeroconf Browser">
+				<action name="Execute">
+					<execute>avahi-discover</execute>
+				</action>
+			</item>
+			<item label="dconf Editor">
+				<action name="Execute">
+					<execute>dconf-editor</execute>
+				</action>
+			</item>
+			<item label="Htop">
+				<action name="Execute">
+					<execute>xterm -e htop</execute>
+				</action>
+			</item>
+			<item label="Top">
+				<action name="Execute">
+					<execute>xterm -e top</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="XTerm">
+			<action name="Execute">
+				<execute>xterm</execute>
+			</action>
+		</item>
+		<item label="FireFox">
+			<action name="Execute">
+				<execute>firefox</execute>
+			</action>
+		</item>
+		<menu id="40" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Restart">
+				<action name="Restart"/>
+			</item>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<item label="Exit">
+				<action name="Exit"/>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
