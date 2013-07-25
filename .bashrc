@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # bash options
+# notify of background process completion
 set -b
+# set vi editing mode
 set -o vi
 
 # aliases
@@ -10,20 +12,23 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ls='ls --color=auto'
-alias l='ls -AFhl --group-directories-first'
-alias ll='ls -AFhl --group-directories-first | less'
+alias l='ls -AFhls --group-directories-first'
+alias ll='ls -AFhls --group-directories-first | less'
 alias t='tail -f /var/log/messages.log'
 alias pacup='sudo nice pacman -Syu'
 alias pu='nice pacaur -Syu'
 alias yumup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
+alias aptup='sudo nice apt-get update && sudo apt-get dist-upgrade'
 alias xx='exit'
-export TERM='xterm'
-export EDITOR='vim'
 
 # modify path to include home scripts
 PATH=~/scripts:$PATH
+
+# exports
 export PATH
+export TERM='xterm'
+export EDITOR='vim'
 
 # Prompt colors
 CLR_GRAY='\[\e[30;1m\]'
@@ -36,7 +41,7 @@ CLR_CYAN='\[\e[36;1m\]'
 CLR_WHITE='\[\e[37;1m\]'
 CLR_RESET='\[\e[0m\]'
 
-# Prompt function
+# Prompt function that shows current git branch and dirty status
 function set_prompt() {
 
   # Git branch / dirtiness
