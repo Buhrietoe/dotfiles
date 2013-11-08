@@ -3,6 +3,9 @@
 ARG=$1
 
 case $ARG in
+"c" )
+`cp -f ~/scripts/xguis/.xinitrc_cinnamon ~/.xinitrc`
+;;
 "g" )
 `cp -f ~/scripts/xguis/.xinitrc_gnome ~/.xinitrc`
 ;;
