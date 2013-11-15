@@ -15,12 +15,10 @@ alias ls='ls --color=auto'
 alias l='ls -AFhls --group-directories-first'
 alias ll='ls -AFhls --group-directories-first | less'
 alias t='tail -f /var/log/messages.log'
-alias pacup='sudo nice pacman -Syu'
 alias pu='nice pacaur -Syu'
-alias yumup='sudo nice yum upgrade'
+alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
-alias aptup='sudo nice apt-get update && sudo apt-get dist-upgrade'
-alias xx='exit'
+alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
 
 # modify path to include home scripts
 PATH=~/scripts:$PATH
