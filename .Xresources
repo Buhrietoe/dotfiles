@@ -1,12 +1,33 @@
-! Font config
+! Xft settings ---------------------------------------------------------
 Xft.dpi: 96
-Xft.antialias: true
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.autohint: 0
 Xft.lcdfilter: lcddefault
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.hinting: 1
+Xft.hintstyle: hintfull
 
-! XTerm config
-XTerm*Foreground: white
-XTerm*Background: black
-XTerm*Font: -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
+! xterm ----------------------------------------------------------------
+xterm*saveLines: 1000
+xterm*AllowIconInput: on
+xterm*background: #000000
+xterm*foreground: #FFFFFF
+xterm*border: #BFBFBF
+xterm*DeiconifyWarp: off
+xterm*Font: -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
+xterm*InternalBorder: 1
+xterm*MarginBell: off
+xterm*MenuFont: fixed8
+xterm*Mouse: yellow
+xterm*TitleFont: vtbold
+xterm*charClass: 33:48,37:48,45-47:48,64:48
+xterm*colorAttrMode: true
+xterm*colorMode: true
+xterm*curses: on
+xterm*cutNewline: off
+xterm*jumpScroll: on
+xterm*multiClickTime: 500
+xterm*multiScroll: on
+xterm*reverseWrap: off
+xterm*scrollBar: off
+
