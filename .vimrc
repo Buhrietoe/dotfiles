@@ -19,5 +19,16 @@ set nowritebackup
 set noswapfile
 set gfn=Monospace\ 10
 set ls=2
+
+" Reselect visual block after adjusting indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Move around in insert mode
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+
 color torte
 syn on
