@@ -11,7 +11,7 @@ Xft.hintstyle: hintfull
 xterm*saveLines: 1000
 xterm*AllowIconInput: on
 xterm*background: #000000
-xterm*foreground: #DDDDDD
+xterm*foreground: #EEEEEE
 xterm*border: #BFBFBF
 xterm*DeiconifyWarp: off
 xterm*Font: -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
@@ -68,7 +68,7 @@ URxvt*scrollBar: false
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
 URxvt*background: #000000
-URxvt*foreground: #DDDDDD
+URxvt*foreground: #EEEEEE
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
 ! URxvt*color2:                         color
