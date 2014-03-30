@@ -2,6 +2,7 @@
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 start-pulseaudio-x11 &
+xcompmgr -n -c -C -f -F -D5 -t-5 -l-5 -r4.2 -o.5 2>/dev/null &
 #hsetroot -fill ~/Pictures/bg.png
 
 exec spectrwm
