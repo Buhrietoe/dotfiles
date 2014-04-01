@@ -19,6 +19,7 @@ alias pu='nice pacaur -Syu'
 alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
+alias py='source ~/py/bin/activate && echo Python environment activated'
 
 # modify path to include home scripts
 PATH=~/scripts:$PATH
