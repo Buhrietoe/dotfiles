@@ -1,0 +1,17 @@
+# Show xbindkeys gui
+"xbindkeys_show" 
+  control+shift + q
+
+# Screen Brightness
+"xbacklight -inc 20"
+  XF86MonBrightnessUp
+"xbacklight -dec 20"
+  XF86MonBrightnessDown
+
+# Audio
+"amixer -q set Master 5%+"
+  XF86AudioRaiseVolume
+"amixer -q set Master 5%-"
+  XF86AudioLowerVolume
+"amixer -q set Master toggle"
+  XF86AudioMute
