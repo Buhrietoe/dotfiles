@@ -3,8 +3,16 @@
 # bash options
 # notify of background process completion
 set -b
+
 # set vi editing mode
 set -o vi
+
+# wrap text properly if term size changes
+shopt -s checkwinsize
+
+# try to correct typing mistakes on directories
+shopt -s cdspell
+shopt -s dirspell
 
 # aliases
 alias ..='cd ..'
