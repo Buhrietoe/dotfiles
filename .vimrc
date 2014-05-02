@@ -1,3 +1,17 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+filetype plugin indent on
+
 set smartindent
 set showmatch
 set showmode
@@ -30,5 +44,5 @@ inoremap <C-j> <down>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
-color torte
+color peachpuff
 syn on
