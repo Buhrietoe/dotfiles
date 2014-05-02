@@ -38,14 +38,14 @@ export TERM='xterm'
 export EDITOR='vim'
 
 # Prompt colors
-CLR_GRAY='\[\e[30;1m\]'
-CLR_RED='\[\e[31;1m\]'
-CLR_GREEN='\[\e[32;1m\]'
-CLR_YELLOW='\[\e[33;1m\]'
-CLR_BLUE='\[\e[34;1m\]'
-CLR_PURPLE='\[\e[35;1m\]'
-CLR_CYAN='\[\e[36;1m\]'
-CLR_WHITE='\[\e[37;1m\]'
+CLR_GRAY='\[\e[30m\]'
+CLR_RED='\[\e[31m\]'
+CLR_GREEN='\[\e[32m\]'
+CLR_YELLOW='\[\e[33m\]'
+CLR_BLUE='\[\e[34m\]'
+CLR_PURPLE='\[\e[35m\]'
+CLR_CYAN='\[\e[36m\]'
+CLR_WHITE='\[\e[37m\]'
 CLR_RESET='\[\e[0m\]'
 
 # Prompt function that shows current git branch and dirty status
@@ -65,7 +65,7 @@ function set_prompt() {
     branch="${CLR_WHITE}[${CLR_PURPLE}${_branch}${dirty}${CLR_WHITE}]"
   fi
 
-  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_GRAY\h$CLR_WHITE:$CLR_GREEN\w${branch}$CLR_GRAY# $CLR_RESET"
+  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_CYAN\h$CLR_WHITE:$CLR_YELLOW\w${branch}$CLR_CYAN# $CLR_RESET"
 
 }
 export PROMPT_COMMAND=set_prompt
