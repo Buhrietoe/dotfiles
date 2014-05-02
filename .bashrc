@@ -34,7 +34,7 @@ PATH=~/scripts:$PATH
 
 # exports
 export PATH
-export TERM='xterm'
+export TERM='urxvt'
 export EDITOR='vim'
 
 # Prompt colors
