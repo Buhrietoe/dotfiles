@@ -17,6 +17,7 @@ Xft.hintstyle: hintfull
 #define S_blue #268bd2
 #define S_cyan #2aa198
 #define S_green #859900
+#define S_black #000000
 
 ! Base colors ----------------------------------------------------------
 #define S_base03 #002b36
@@ -29,9 +30,9 @@ Xft.hintstyle: hintfull
 #define S_base3 #fdf6e3
 
 ! Set the default colors -----------------------------------------------
-*background: S_base03
+*background: S_black
 *foreground: S_base0
-*fading: 20
+*fading: 30
 *fadeColor: S_base03
 *cursorColor: S_base1
 *pointerColorBackground: S_base01
