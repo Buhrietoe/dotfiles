@@ -28,6 +28,9 @@ alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
 alias py='source ~/py/bin/activate && echo Python environment activated'
+alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --save /etc/pacman.d/mirrorlist'
+alias purgeswap='sudo swapoff -a && sudo swapon -a'
+alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 
 # modify path to include home scripts
 PATH=~/scripts:$PATH
