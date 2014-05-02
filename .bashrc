@@ -68,7 +68,7 @@ function set_prompt() {
     branch="${CLR_WHITE}[${CLR_PURPLE}${_branch}${dirty}${CLR_WHITE}]"
   fi
 
-  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_CYAN\h$CLR_WHITE:$CLR_YELLOW\w${branch}$CLR_CYAN# $CLR_RESET"
+  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_BLUE\h$CLR_WHITE:$CLR_YELLOW\w${branch}$CLR_CYAN# $CLR_RESET"
 
 }
 export PROMPT_COMMAND=set_prompt
