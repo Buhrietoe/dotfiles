@@ -341,14 +341,14 @@
       </action>
     </keybind>
     <!-- Custom Keybindings -->
-    <keybind key="A-p">
+    <keybind key="W-p">
       <action name="Execute">
         <command>~/scripts/dmenu-launch.sh</command>
       </action>
     </keybind>
-    <keybind key="A-Return">
+    <keybind key="W-Return">
       <action name="Execute">
-        <command>xterm</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="W-l">

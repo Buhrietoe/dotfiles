@@ -333,7 +333,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>xterm</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="W-f">
