@@ -31,6 +31,7 @@ alias py='source ~/py/bin/activate && echo Python environment activated'
 alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
 alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
+alias screenoff='sleep 1 && xset dpms force off'
 
 # modify path to include home scripts
 PATH=~/scripts:$PATH
