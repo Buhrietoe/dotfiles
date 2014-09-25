@@ -72,4 +72,4 @@ function set_prompt() {
   export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_BLUE\h$CLR_WHITE:$CLR_YELLOW\w${branch}$CLR_CYAN# $CLR_RESET"
 
 }
-export PROMPT_COMMAND=set_prompt
+PROMPT_COMMAND=set_prompt
