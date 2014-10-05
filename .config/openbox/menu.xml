@@ -4,7 +4,7 @@
 		<menu id="2" label="Editors">
 			<item label="Vim">
 				<action name="Execute">
-					<execute>xterm -e vim</execute>
+					<execute>urxvt -e vim</execute>
 				</action>
 			</item>
 		</menu>
@@ -44,12 +44,7 @@
 		<menu id="7" label="Multimedia">
 			<item label="ALSA mixer">
 				<action name="Execute">
-					<execute>xterm -e alsamixer</execute>
-				</action>
-			</item>
-			<item label="Music Player">
-				<action name="Execute">
-					<execute>lxmusic</execute>
+					<execute>urxvt -e alsamixer</execute>
 				</action>
 			</item>
 			<item label="VLC media player">
@@ -58,55 +53,14 @@
 				</action>
 			</item>
 		</menu>
-		<menu id="5" label="Network">
-			<item label="Avahi SSH Server Browser">
-				<action name="Execute">
-					<execute>bssh</execute>
-				</action>
-			</item>
-			<item label="Avahi VNC Server Browser">
-				<action name="Execute">
-					<execute>bvnc</execute>
-				</action>
-			</item>
 			<item label="FireFox">
 				<action name="Execute">
 					<execute>firefox</execute>
 				</action>
 			</item>
-			<item label="FTP">
-				<action name="Execute">
-					<execute>xterm -e ftp</execute>
-				</action>
-			</item>
-			<item label="Mail">
-				<action name="Execute">
-					<execute>xterm -e mail</execute>
-				</action>
-			</item>
-			<item label="Talk">
-				<action name="Execute">
-					<execute>xterm -e talk</execute>
-				</action>
-			</item>
 			<item label="Telnet">
 				<action name="Execute">
-					<execute>xterm -e telnet</execute>
-				</action>
-			</item>
-			<item label="TkVNC">
-				<action name="Execute">
-					<execute>xterm -e tkvnc</execute>
-				</action>
-			</item>
-			<item label="Zenmap">
-				<action name="Execute">
-					<execute>zenmap</execute>
-				</action>
-			</item>
-			<item label="Zenmap (as root)">
-				<action name="Execute">
-					<execute>/usr/share/zenmap/su-to-zenmap.sh</execute>
+					<execute>urxvt -e telnet</execute>
 				</action>
 			</item>
 		</menu>
@@ -118,17 +72,12 @@
 			</item>
 			<item label="GIT">
 				<action name="Execute">
-					<execute>xterm -e git</execute>
+					<execute>urxvt -e git</execute>
 				</action>
 			</item>
-			<item label="LXTerminal">
+			<item label="urxvt">
 				<action name="Execute">
-					<execute>lxterminal</execute>
-				</action>
-			</item>
-			<item label="UXTerm">
-				<action name="Execute">
-					<execute>uxterm</execute>
+					<execute>urxvt</execute>
 				</action>
 			</item>
 			<item label="Xterm">
@@ -211,19 +160,19 @@
 			</item>
 			<item label="Htop">
 				<action name="Execute">
-					<execute>xterm -e htop</execute>
+					<execute>urxvt -e htop</execute>
 				</action>
 			</item>
 			<item label="Top">
 				<action name="Execute">
-					<execute>xterm -e top</execute>
+					<execute>urxvt -e top</execute>
 				</action>
 			</item>
 		</menu>
 		<separator/>
-		<item label="XTerm">
+		<item label="urxvt">
 			<action name="Execute">
-				<execute>xterm</execute>
+				<execute>urxvt</execute>
 			</action>
 		</item>
 		<item label="FireFox">
