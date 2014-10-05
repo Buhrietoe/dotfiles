@@ -8,22 +8,6 @@
 				</action>
 			</item>
 		</menu>
-		<menu id="18" label="Games">
-			<menu id="9" label="Adventure">
-				<item label="Sclient">
-					<action name="Execute">
-						<execute>sclient</execute>
-					</action>
-				</item>
-			</menu>
-			<menu id="10" label="Arcade">
-				<item label="PacMan">
-					<action name="Execute">
-						<execute>pacman</execute>
-					</action>
-				</item>
-			</menu>
-		</menu>
 		<menu id="6" label="Graphics">
 			<item label="Feh">
 				<action name="Execute">
@@ -53,6 +37,7 @@
 				</action>
 			</item>
 		</menu>
+		<menu id="8" label="Web">
 			<item label="FireFox">
 				<action name="Execute">
 					<execute>firefox</execute>
@@ -110,16 +95,6 @@
 				<item label="Desktop Preferences">
 					<action name="Execute">
 						<execute>pcmanfm --desktop-pref</execute>
-					</action>
-				</item>
-				<item label="Java">
-					<action name="Execute">
-						<execute>jcontrol</execute>
-					</action>
-				</item>
-				<item label="Java Policy Settings">
-					<action name="Execute">
-						<execute>policytool</execute>
 					</action>
 				</item>
 				<item label="Keyboard and Mouse">
