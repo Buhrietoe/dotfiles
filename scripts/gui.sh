@@ -21,6 +21,9 @@ case $ARG in
 "o" )
 `cp -f ~/scripts/xguis/.xinitrc_openbox ~/.xinitrc`
 ;;
+"i" )
+`cp -f ~/scripts/xguis/.xinitrc_i3 ~/.xinitrc`
+;;
 ** )
 echo
 echo "Not a valid option."

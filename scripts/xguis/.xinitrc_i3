@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+start-pulseaudio-x11 &
+xbindkeys &
+#hsetroot -fill ~/Pictures/bg.png
+
+exec i3
