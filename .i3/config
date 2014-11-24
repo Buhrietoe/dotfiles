@@ -45,6 +45,9 @@ bindsym $mod+p exec ~/scripts/dmenu-launch.sh
 # lock screen
 bindsym $mod+Shift+Delete exec xlock
 
+# turn screen off
+bindsym $mod+Shift+Insert exec sleep 1 && xset dpms force off
+
 # init screen
 bindsym $mod+m exec ~/.screenlayout/layout.sh
 
