@@ -26,11 +26,6 @@ font -*-fixed-medium-r-normal-*-13-*-*-*-*-*-*-*
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn't scale on retina/hidpi displays.
 
-client.focused #608060 #406040 #ffffff #608060
-client.focused_inactive #404040 #203020 #ffffff #203020
-client.unfocused #404040 #203020 #ffffff #203020
-client.urgent #608060 #404040 #ffffff #202020
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -166,6 +161,22 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command conky
+  status_command conky
+  colors {
+    background #102010
+    statusline #ffffff
+    separator #404040
+
+    focused_workspace  #608060 #406040 #ffffff
+    active_workspace   #404040 #406040 #ffffff
+    inactive_workspace #404040 #202020 #888888
+    urgent_workspace   #600000 #202020 #ffffff
+  }
 }
+
+# Colors
+client.focused #608060 #406040 #ffffff #608060
+client.focused_inactive #404040 #203020 #ffffff #203020
+client.unfocused #404040 #203020 #ffffff #203020
+client.urgent #608060 #404040 #ffffff #202020
 
