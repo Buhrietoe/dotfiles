@@ -26,9 +26,9 @@ font -*-fixed-medium-r-normal-*-13-*-*-*-*-*-*-*
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn't scale on retina/hidpi displays.
 
-client.focused #406040 #304030 #ffffff #406040
-client.focused_inactive #404040 #202020 #ffffff #202020
-client.unfocused #404040 #202020 #ffffff #202020
+client.focused #608060 #406040 #ffffff #608060
+client.focused_inactive #203020 #203020 #ffffff #203020
+client.unfocused #203020 #203020 #ffffff #203020
 client.urgent #608060 #404040 #ffffff #202020
 
 # Use Mouse+$mod to drag floating windows to their wanted position
