@@ -5,4 +5,4 @@ total_run_times 0
 use_spacer none
 if_up_strictness address
 TEXT
-${cpu}% $mem ${if_up wlp1s0}${addr wlp1s0}${endif}${if_up enp2s0}${addr enp2s0}${endif}${time %l:%M%P - %m/%d/%y}
+${cpu}% $mem ${if_up wlp1s0}${addr wlp1s0}${endif}${if_up enp2s0}${addr enp2s0}${endif} ${time %l:%M%P - %m/%d/%y}
