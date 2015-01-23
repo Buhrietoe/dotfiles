@@ -25,7 +25,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
-set textwidth=80
+" set textwidth=80
 set ff=unix
 set encoding=utf-8
 set number
