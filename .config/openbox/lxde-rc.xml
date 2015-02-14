@@ -343,7 +343,7 @@
     <!-- Custom Keybindings -->
     <keybind key="W-p">
       <action name="Execute">
-        <command>~/scripts/dmenu-launch.sh</command>
+        <command>~/bin/dmenu-launch.sh</command>
       </action>
     </keybind>
     <keybind key="W-Return">
