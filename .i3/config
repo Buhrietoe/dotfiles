@@ -43,7 +43,7 @@ bindsym $mod+p exec ~/bin/dmenu-launch.sh
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # lock screen
-bindsym $mod+Shift+Delete exec xlock
+bindsym $mod+Shift+Delete exec slock
 
 # turn screen off
 bindsym $mod+Shift+Insert exec sleep 1 && xset dpms force off
