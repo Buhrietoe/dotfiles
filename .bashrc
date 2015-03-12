@@ -53,9 +53,13 @@ CLR_CYAN='\[\e[36m\]'
 CLR_WHITE='\[\e[37m\]'
 CLR_RESET='\[\e[0m\]'
 
+# Set terminal window title
+function title() {
+  echo -en "\033]0;$@\a"
+}
+
 # Prompt function that shows current git branch and dirty status
 function set_prompt() {
-
   # Git branch / dirtiness
   if git update-index -q --refresh 2>/dev/null; git diff-index --quiet --cached HEAD --ignore-submodules -- 2>/dev/null && git diff-files --quiet --ignore-submodules 2>/dev/null
     then dirty=""
@@ -71,6 +75,6 @@ function set_prompt() {
   fi
 
   export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_BLUE\h$CLR_WHITE:$CLR_YELLOW\w${branch}$CLR_CYAN# $CLR_RESET"
-
 }
+
 PROMPT_COMMAND=set_prompt
