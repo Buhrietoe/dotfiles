@@ -16,7 +16,7 @@ Xft.hintstyle: hintfull
 #define S_violet #6c71c4
 #define S_blue #268bd2
 #define S_cyan #2aa198
-#define S_green #859900
+#define S_green #409900
 #define S_black #000000
 
 ! Base colors ----------------------------------------------------------
