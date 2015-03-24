@@ -8,9 +8,14 @@ call vundle#begin()
 " Plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
+
+" nerdtree plugin tweak
+let g:NERDTreeDirArrows = 0
 
 set smartindent
 set showmatch
