@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-distinguished'
 
 call vundle#end()
 filetype plugin indent on
@@ -51,5 +52,5 @@ inoremap <C-j> <down>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
-color peachpuff
+colorscheme distinguished
 syn on
