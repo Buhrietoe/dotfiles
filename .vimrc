@@ -54,5 +54,8 @@ inoremap <C-l> <right>
 " Trigger NERDTree display
 nnoremap <F2> :NERDTreeToggle<CR>
 
+" Toggle line numbers
+nnoremap <F3> :set invnumber<CR>
+
 colorscheme elflord
 syn on
