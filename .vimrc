@@ -7,9 +7,10 @@ call vundle#begin()
 
 " Plugins
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'snipMate'
+Plugin 'AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
@@ -25,9 +26,9 @@ set smartcase
 set visualbell
 set modelines=0
 set background=dark
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 " set textwidth=80
