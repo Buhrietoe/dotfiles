@@ -42,6 +42,9 @@ bindsym $mod+p exec ~/bin/dmenu-launch.sh
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# nmcli_dmenu
+bindsym $mod+o exec nmcli_dmenu
+
 # lock screen
 bindsym $mod+Shift+Delete exec slock
 
@@ -180,3 +183,5 @@ client.focused_inactive #608060 #203020 #ffffff #203020
 client.unfocused #404040 #203020 #ffffff #203020
 client.urgent #608060 #404040 #ffffff #202020
 
+# Autostart
+exec --no-startup-id feh --bg-fill /home/jason/downloads/bg.jpg
