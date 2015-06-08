@@ -8,9 +8,9 @@ call vundle#begin()
 " Plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'snipMate'
-Plugin 'AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
@@ -18,6 +18,13 @@ filetype plugin indent on
 " nerdtree plugin tweak
 let g:NERDTreeDirArrows = 0
 
+" neocomplete tweaks
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+let mapleader=","
+set timeout timeoutlen=1500
 set smartindent
 set showmatch
 set showmode
@@ -52,11 +59,16 @@ inoremap <C-j> <down>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
-" Trigger NERDTree display
+" Toggle NERDTree
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
+
+" Buffer control
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
+nnoremap <C-l> :bdelete<CR>
 
 colorscheme elflord
 syn on
