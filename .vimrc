@@ -11,6 +11,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'klen/python-mode.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -22,6 +23,10 @@ let g:NERDTreeDirArrows = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" python-mode tweaks
+let g:pymode_folding = 0
+let g:pymode_lint_on_fly = 1
 
 let mapleader=","
 set timeout timeoutlen=1500
