@@ -9,7 +9,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'klen/python-mode.git'
 
@@ -30,7 +29,7 @@ let g:pymode_lint_on_fly = 1
 
 let mapleader=","
 set timeout timeoutlen=1500
-set smartindent
+set autoindent
 set showmatch
 set showmode
 set showcmd
@@ -38,9 +37,9 @@ set smartcase
 set visualbell
 set modelines=0
 set background=dark
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
 " set textwidth=80
