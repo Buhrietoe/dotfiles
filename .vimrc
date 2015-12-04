@@ -18,14 +18,9 @@ filetype plugin indent on
 " nerdtree plugin tweak
 let g:NERDTreeDirArrows = 0
 
-" neocomplete tweaks
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
 " python-mode tweaks
 let g:pymode_folding = 0
-let g:pymode_lint_on_fly = 1
+let g:pymode_rope = 0
 
 let mapleader=","
 set timeout timeoutlen=1500
@@ -74,5 +69,5 @@ nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
 nnoremap <C-l> :bdelete<CR>
 
-colorscheme elflord
+colorscheme slate
 syn on
