@@ -158,7 +158,7 @@ URxvt*font: -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
 ! URxvt*imFont:                         fontname
 ! URxvt*title:                          string
 ! URxvt*iconName:                       string
-! URxvt*saveLines:                      number
+URxvt*saveLines: 5000
 ! URxvt*buffered:                       boolean
 ! URxvt*depth:                          number
 ! URxvt*visual:                         number
