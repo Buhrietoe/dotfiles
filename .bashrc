@@ -33,7 +33,7 @@ alias pipup='pip freeze --local | grep -v "^\-e" | cut -d = -f 1 | xargs pip ins
 alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 alias screenoff='sleep 1 && xset dpms force off'
-alias dclean='for i in $(docker ps -a | grep -v "CONTAINER ID" | awk '"'"'{print $1}'"'"'); do docker rm $i; done'
+alias dclean='for i in $(docker ps -a -q ); do docker rm $i; done'
 
 # modify path to include home bin
 PATH=~/bin:$PATH
