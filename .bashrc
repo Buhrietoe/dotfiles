@@ -33,7 +33,6 @@ alias pipup='pip freeze --local | grep -v "^\-e" | cut -d = -f 1 | xargs pip ins
 alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 alias screenoff='sleep 1 && xset dpms force off'
-alias dclean='for i in $(docker ps -a -q); do docker rm $i; done'
 
 # modify path to include home bin
 PATH=~/bin:$PATH
@@ -57,6 +56,12 @@ CLR_RESET='\[\e[0m\]'
 # Set terminal window title
 function title() {
   echo -en "\033]0;$@\a"
+}
+
+# Clean stopped containers
+function dclean() {
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 # Prompt function that shows current git branch and dirty status
