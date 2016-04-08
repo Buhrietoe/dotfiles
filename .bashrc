@@ -41,6 +41,7 @@ PATH=~/bin:$PATH
 export PATH
 export TERM='rxvt-256color'
 export EDITOR='vim'
+export GOPATH=$HOME
 
 # Prompt colors
 CLR_GRAY='\[\e[30m\]'
