@@ -54,6 +54,11 @@ CLR_CYAN='\[\e[36m\]'
 CLR_WHITE='\[\e[37m\]'
 CLR_RESET='\[\e[0m\]'
 
+# Create ssh key pair
+function keygen() {
+  ssh-keygen -t ed25519 -N '' -C "$@ $(date +%F)" -f "$@"
+}
+
 # Set terminal window title
 function title() {
   echo -en "\033]0;$@\a"
