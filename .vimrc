@@ -11,6 +11,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'klen/python-mode.git'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,7 +46,8 @@ set hidden
 set nobackup
 set nowritebackup
 set noswapfile
-set gfn=Monospace\ 10
+set nowrap
+set gfn=Terminus\ 10
 set ls=2
 
 " Reselect visual block after adjusting indentation
