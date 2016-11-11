@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Its pretty
 Plugin 'vim-airline/vim-airline'
+Plugin 'tomasr/molokai'
 
 " Helpers
 Plugin 'scrooloose/nerdtree'
@@ -83,5 +84,5 @@ nnoremap <C-l> :bdelete<CR>
 " Tab specific
 nnoremap <C-n> :tabnew<CR>
 
-colorscheme slate
+colorscheme molokai
 syn on
