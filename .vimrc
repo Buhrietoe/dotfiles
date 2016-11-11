@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fweep/vim-tabber'
 Plugin 'roxma/SimpleAutoComplPop'
+Plugin 'mhinz/vim-signify'
 
 " Language specific
 Plugin 'klen/python-mode.git'
