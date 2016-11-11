@@ -15,6 +15,7 @@ Plugin 'tomasr/molokai'
 " Helpers
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'fweep/vim-tabber'
 Plugin 'roxma/SimpleAutoComplPop'
 
 " Language specific
@@ -31,6 +32,10 @@ let g:molokai_original = 1
 
 " nerdtree plugin tweak
 let g:NERDTreeDirArrows = 0
+
+" tabber
+set tabline=%!tabber#TabLine()
+let g:tabber_filename_style = 'pathshorten'
 
 " python-mode tweaks
 let g:pymode_folding = 0
@@ -105,8 +110,8 @@ nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :set invnumber<CR>
 
 " Buffer control
-nnoremap <C-j> :bnext<CR>
-nnoremap <C-k> :bprevious<CR>
+nnoremap <C-j> :tabnext<CR>
+nnoremap <C-k> :tabprevious<CR>
 nnoremap <C-l> :bdelete<CR>
 
 " Tab specific
