@@ -10,14 +10,16 @@ Plugin 'gmarik/Vundle.vim'
 
 " Its pretty
 Plugin 'vim-airline/vim-airline'
+Plugin 'fweep/vim-tabber'
+Plugin 'mhinz/vim-signify'
+
+" Color
 Plugin 'tomasr/molokai'
 
 " Helpers
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'fweep/vim-tabber'
 Plugin 'roxma/SimpleAutoComplPop'
-Plugin 'mhinz/vim-signify'
 
 " Language specific
 Plugin 'klen/python-mode.git'
@@ -32,7 +34,7 @@ let g:rehash256 = 1
 let g:molokai_original = 1
 
 " nerdtree plugin tweak
-let g:NERDTreeDirArrows = 0
+let g:NERDTreeDirArrows = 1
 
 " tabber
 set tabline=%!tabber#TabLine()
