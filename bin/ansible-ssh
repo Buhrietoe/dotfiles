@@ -1,0 +1,11 @@
+#!/bin/bash
+# Depends on ansible and sshpass
+
+ANSIBLE_INV="$1"
+ANSIBLE_HOST="$2"
+
+function ansible-ssh-output {
+    echo "$1" | grep msg | awk -F\" '{print $4}'
+}
+
+sshpass -p $(ansible-ssh-output "$(ansible -i $ANSIBLE_INV -m debug -a 'msg={{ ansible_ssh_pass }}' $ANSIBLE_HOST)") ssh $(ansible-ssh-output "$(ansible -i $ANSIBLE_INV -m debug -a 'msg={{ ansible_ssh_user }}@{{ ansible_ssh_host }}' $ANSIBLE_HOST)")
