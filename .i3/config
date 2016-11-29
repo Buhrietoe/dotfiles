@@ -46,7 +46,7 @@ bindsym $mod+p exec ~/bin/dmenu-launch.sh
 bindsym $mod+o exec nmcli_dmenu
 
 # lock screen
-bindsym $mod+Shift+Delete exec slock
+bindsym $mod+Shift+Delete exec i3lock -c 102010
 
 # turn screen off
 bindsym $mod+Shift+Insert exec sleep 1 && xset dpms force off
