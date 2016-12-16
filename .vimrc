@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Its pretty
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fweep/vim-tabber'
 Plugin 'mhinz/vim-signify'
 
@@ -22,7 +23,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'roxma/SimpleAutoComplPop'
 
 " Language specific
-Plugin 'klen/python-mode.git'
+Plugin 'klen/python-mode'
 Plugin 'fatih/vim-go'
 Plugin 'Blackrush/vim-gocode'
 
@@ -37,9 +38,14 @@ let g:molokai_original = 1
 " nerdtree plugin tweak
 let g:NERDTreeDirArrows = 1
 
-" tabber
-set tabline=%!tabber#TabLine()
+" tabber tweaks
 let g:tabber_filename_style = 'pathshorten'
+let g:tabber_divider_style = 'unicode'
+set tabline=%!tabber#TabLine()
+
+" airline tweaks
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='jellybeans'
 
 " python-mode tweaks
 let g:pymode_folding = 0
@@ -131,7 +137,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
 
-" Buffer control
+" Tab/Buffer control
 nnoremap <C-j> :tabnext<CR>
 nnoremap <C-k> :tabprevious<CR>
 nnoremap <C-l> :bdelete<CR>
@@ -141,7 +147,5 @@ nnoremap <C-n> :tabnew<CR>
 
 " Syntax Colors
 set t_Co=256
-let g:rehash256 = 1
-let g:molokai_original = 1
 colorscheme molokai
 syn on
