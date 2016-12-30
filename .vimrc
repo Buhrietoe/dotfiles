@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 " Its pretty
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'fweep/vim-tabber'
 Plugin 'mhinz/vim-signify'
 
 " Color
@@ -37,11 +36,6 @@ let g:molokai_original = 1
 
 " nerdtree plugin tweak
 let g:NERDTreeDirArrows = 1
-
-" tabber tweaks
-let g:tabber_filename_style = 'pathshorten'
-let g:tabber_divider_style = 'unicode'
-set tabline=%!tabber#TabLine()
 
 " airline tweaks
 let g:airline#extensions#tabline#enabled = 1
@@ -138,8 +132,8 @@ nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :set invnumber<CR>
 
 " Tab/Buffer control
-nnoremap <C-j> :tabnext<CR>
-nnoremap <C-k> :tabprevious<CR>
+nnoremap <C-j> :bn<CR>
+nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bdelete<CR>
 
 " Tab specific
