@@ -81,6 +81,7 @@ set timeout timeoutlen=1500
 set ttyfast
 set ttymouse=xterm2
 set ttyscroll=3
+set clipboard=unnamedplus
 set laststatus=2
 set autoread
 set autowrite
