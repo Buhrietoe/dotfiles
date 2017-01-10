@@ -34,11 +34,8 @@ alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 alias screenoff='sleep 1 && xset dpms force off'
 
-# modify path to include home bin
-PATH=~/bin:$PATH
-
 # exports
-export PATH
+export PATH=~/bin:$PATH
 export TERM='rxvt-256color'
 export EDITOR='vim'
 export GOPATH=$HOME
