@@ -25,6 +25,7 @@ Plugin 'roxma/SimpleAutoComplPop'
 Plugin 'klen/python-mode'
 Plugin 'fatih/vim-go'
 Plugin 'Blackrush/vim-gocode'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
