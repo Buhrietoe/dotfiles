@@ -43,7 +43,7 @@ bindsym $mod+p exec ~/bin/dmenu-launch.sh
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # nmcli_dmenu
-bindsym $mod+o exec nmcli_dmenu
+bindsym $mod+o exec networkmanager_dmenu
 
 # lock screen
 bindsym $mod+Shift+Delete exec i3lock -c 102010
