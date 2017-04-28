@@ -34,6 +34,11 @@ alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 alias screenoff='sleep 1 && xset dpms force off'
 alias dvi='dockviz images --tree -i'
+alias dr='docker run -it --rm'
+alias di='docker images'
+alias dp='docker ps -a'
+alias ds='docker stop'
+alias dc='dclean'
 
 # exports
 export PATH=~/bin:$PATH
