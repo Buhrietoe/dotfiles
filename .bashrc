@@ -37,8 +37,7 @@ alias dvi='dockviz images --tree -i'
 alias dr='docker run -it --rm'
 alias di='docker images'
 alias dp='docker ps -a'
-alias ds='docker stop'
-alias dc='docker-compose'
+alias ds='docker stack'
 
 # exports
 export PATH=~/bin:$PATH
