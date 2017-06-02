@@ -38,7 +38,7 @@ alias dr='docker run -it --rm'
 alias di='docker images'
 alias dp='docker ps -a'
 alias ds='docker stop'
-alias dc='dclean'
+alias dc='docker-compose'
 
 # exports
 export PATH=~/bin:$PATH
