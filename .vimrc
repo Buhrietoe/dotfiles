@@ -95,7 +95,7 @@ set smartcase
 set switchbuf=usetab
 set showtabline=2
 set visualbell
-set modelines=0
+set modelines=1
 set background=dark
 set tabstop=4
 set softtabstop=4
