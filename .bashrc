@@ -45,6 +45,7 @@ export PATH=~/bin:$PATH
 export TERM='rxvt-256color'
 export EDITOR='vim'
 export GOPATH=$HOME
+export JAVA_HOME=/usr/lib/jvm/default
 
 # Prompt colors
 CLR_GRAY='\[\e[30m\]'
