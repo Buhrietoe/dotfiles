@@ -70,6 +70,7 @@ let g:go_highlight_generate_tags = 1
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>d <Plug>(go-doc)
+autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
 
 " SimpleAutoComplPop
 autocmd FileType go call sacp#enableForThisBuffer({ "matches": [
