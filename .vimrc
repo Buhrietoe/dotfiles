@@ -116,7 +116,8 @@ set noerrorbells
 set noshowmatch
 set completeopt=menu,menuone
 set pumheight=10
-set gfn=terminus\ 10
+set guifont=Monospace\ 10
+set guioptions=agimrLtT
 set ls=2
 
 " Reselect visual block after adjusting indentation
