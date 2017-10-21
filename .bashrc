@@ -94,3 +94,6 @@ function set_prompt() {
 }
 
 PROMPT_COMMAND=set_prompt
+
+# local system specific config
+[ -f ~/.bash_local ] && . ~/.bash_local
