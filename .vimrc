@@ -40,7 +40,8 @@ let g:NERDTreeDirArrows = 1
 
 " airline tweaks
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='jellybeans'
+let g:airline_theme = 'jellybeans'
+let g:airline_powerline_fonts = 1
 
 " python-mode tweaks
 let g:pymode_folding = 0
@@ -97,7 +98,7 @@ set smartcase
 set switchbuf=usetab
 set showtabline=2
 set visualbell
-set modelines=1
+set modeline
 set background=dark
 set tabstop=4
 set softtabstop=4
