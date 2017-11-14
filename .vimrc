@@ -1,5 +1,4 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -100,15 +99,15 @@ set showtabline=2
 set visualbell
 set modeline
 set background=dark
-set tabstop=4
+set tabstop=8
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set number
-set hidden
+set nohidden
 set nobackup
 set nowritebackup
 set noswapfile
@@ -122,8 +121,8 @@ set guioptions=agimrLtT
 set ls=2
 
 " Reselect visual block after adjusting indentation
-vnoremap < <gv
-vnoremap > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 " Move around in insert mode
 inoremap <C-k> <up>
