@@ -99,10 +99,10 @@ set showtabline=2
 set visualbell
 set modeline
 set background=dark
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
