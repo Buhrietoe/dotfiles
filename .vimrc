@@ -67,16 +67,18 @@ let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>r <Plug>(go-run)
-autocmd FileType go nmap <leader>d <Plug>(go-doc)
-autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
-
 " SimpleAutoComplPop
 autocmd FileType go call sacp#enableForThisBuffer({ "matches": [
     \ { '=~': '\v[a-zA-Z]{2}$' , 'feedkeys': "\<C-x>\<C-n>"} ,
     \ { '=~': '\.$'            , 'feedkeys': "\<Plug>(sacp_cache_fuzzy_omnicomplete)", "ignoreCompletionMode":1} ,
     \ ]})
+
+" Filetype specific settings
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>d <Plug>(go-doc)
+autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
+autocmd FileType yaml setlocal shiftwidth=2
 
 " vim settings
 let mapleader=","
@@ -136,7 +138,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
 
-" Tab/Buffer control
+" Buffer control
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bdelete<CR>
