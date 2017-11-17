@@ -139,9 +139,7 @@ nnoremap <F3> :set invnumber<CR>
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bdelete<CR>
-
-" Tab specific
-nnoremap <C-n> :tabnew<CR>
+nnoremap <C-n> :enew<CR>
 
 " Syntax Colors
 set t_Co=256
