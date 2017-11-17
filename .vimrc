@@ -106,7 +106,7 @@ set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set number
-set nohidden
+set hidden
 set nobackup
 set nowritebackup
 set noswapfile
