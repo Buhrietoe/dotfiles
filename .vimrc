@@ -75,6 +75,7 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>d <Plug>(go-doc)
 autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
+autocmd FileType go setlocal tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2
 
 " vim settings
@@ -98,10 +99,10 @@ set showtabline=2
 set visualbell
 set modeline
 set background=dark
-set tabstop=4
-set softtabstop=4
+set tabstop=8
 set shiftwidth=4
-set expandtab
+set softtabstop=4
+set noexpandtab
 set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
