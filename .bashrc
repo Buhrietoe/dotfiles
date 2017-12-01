@@ -60,7 +60,7 @@ CLR_RESET='\[\e[0m\]'
 
 # Create ssh key pair
 function keygen() {
-  ssh-keygen -t ed25519 -N '' -C "$@ $(date +%F)" -f "$@"
+  ssh-keygen -t rsa -b 4096 -N '' -C "$@ $(date +%F)" -f "$@"
 }
 
 # Set terminal window title
