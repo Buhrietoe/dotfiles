@@ -13,7 +13,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mhinz/vim-signify'
 
 " Color
-Plugin 'tomasr/molokai'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'beigebrucewayne/Turtles'
 
 " Helpers
 Plugin 'scrooloose/nerdtree'
@@ -28,13 +29,6 @@ Plugin 'rust-lang/rust.vim'
 call vundle#end()
 filetype plugin indent on
 
-
-" molokai tweaks
-let g:rehash256 = 1
-let g:molokai_original = 1
-
-" nerdtree plugin tweak
-let g:NERDTreeDirArrows = 1
 
 " airline tweaks
 let g:airline#extensions#tabline#enabled = 1
@@ -144,5 +138,5 @@ nnoremap <C-n> :enew<CR>
 
 " Syntax Colors
 set t_Co=256
-colorscheme desert
+colorscheme monokai
 syn on
