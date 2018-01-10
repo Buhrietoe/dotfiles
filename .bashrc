@@ -48,15 +48,25 @@ export GOPATH=$HOME
 export JAVA_HOME=/usr/lib/jvm/default
 
 # Prompt colors
-CLR_GRAY='\[\e[30m\]'
-CLR_RED='\[\e[31m\]'
-CLR_GREEN='\[\e[32m\]'
-CLR_YELLOW='\[\e[33m\]'
-CLR_BLUE='\[\e[34m\]'
-CLR_PURPLE='\[\e[35m\]'
-CLR_CYAN='\[\e[36m\]'
-CLR_WHITE='\[\e[37m\]'
 CLR_RESET='\[\e[0m\]'
+# Normal colors
+CLR_BLACK='\[\e[0;30m\]'
+CLR_RED='\[\e[0;31m\]'
+CLR_GREEN='\[\e[0;32m\]'
+CLR_YELLOW='\[\e[0;33m\]'
+CLR_BLUE='\[\e[0;34m\]'
+CLR_PURPLE='\[\e[0;35m\]'
+CLR_CYAN='\[\e[0;36m\]'
+CLR_WHITE='\[\e[0;37m\]'
+# Bold colors
+CLR_BBLACK='\[\e[1;30m\]'
+CLR_BRED='\[\e[1;31m\]'
+CLR_BGREEN='\[\e[1;32m\]'
+CLR_BYELLOW='\[\e[1;33m\]'
+CLR_BBLUE='\[\e[1;34m\]'
+CLR_BPURPLE='\[\e[1;35m\]'
+CLR_BCYAN='\[\e[1;36m\]'
+CLR_BWHITE='\[\e[1;37m\]'
 
 # Create ssh key pair
 function keygen() {
@@ -90,7 +100,7 @@ function set_prompt() {
     branch="${CLR_WHITE}[${CLR_PURPLE}${_branch}${dirty}${CLR_WHITE}]"
   fi
 
-  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_BLUE\h$CLR_WHITE:$CLR_YELLOW\w${branch}\n$CLR_CYAN# $CLR_RESET"
+  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_GREEN\h$CLR_BWHITE:$CLR_YELLOW\w${branch}\n$CLR_WHITE# $CLR_RESET"
 }
 
 PROMPT_COMMAND=set_prompt
