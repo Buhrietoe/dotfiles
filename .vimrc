@@ -144,5 +144,5 @@ nnoremap <C-n> :enew<CR>
 
 " Syntax Colors
 set t_Co=256
-colorscheme default
+colorscheme desert
 syn on
