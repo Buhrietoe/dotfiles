@@ -23,6 +23,7 @@ Plugin 'roxma/SimpleAutoComplPop'
 
 " Language specific
 Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
 
