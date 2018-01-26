@@ -137,6 +137,18 @@ nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bdelete<CR>
 nnoremap <C-n> :enew<CR>
 
+" Convert between yaml and json
+function Y2J()
+    if &filetype == 'yaml'
+	exec "%!y2j -"
+	exec "set filetype=json"
+    elseif &filetype == 'json'
+	exec "%!j2y -"
+	exec "set filetype=yaml"
+    endif
+endfunction
+nnoremap <leader>c :call Y2J()<CR>
+
 " Syntax Colors
 set t_Co=256
 colorscheme monokai

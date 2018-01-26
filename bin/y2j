@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+# Convert yaml to json
+
+import json
+import yaml
+import sys
+
+__title__ = 'yaml to json converter'
+__version__ = '1.0.0'
+__author__ = 'Jason Gardner <buhrietoe@gmail.com>'
+
+
+class yaml2json(object):
+    def __init__(self):
+        print(self.convert(sys.stdin))
+
+    def convert(self, data):
+        jsonData = json.dumps(yaml.load(data.read()), sort_keys=True, indent=2)
+        return jsonData
+
+
+if __name__ == '__main__':
+    yaml2json()
