@@ -141,10 +141,14 @@ nnoremap <C-n> :enew<CR>
 function Y2J()
     if &filetype == 'yaml'
 	exec "%!y2j -"
-	exec "set filetype=json"
+	if v:shell_error == 0
+	    exec "set filetype=json"
+	endif
     elseif &filetype == 'json'
 	exec "%!j2y -"
-	exec "set filetype=yaml"
+	if v:shell_error == 0
+	    exec "set filetype=yaml"
+	endif
     endif
 endfunction
 nnoremap <leader>c :call Y2J()<CR>
