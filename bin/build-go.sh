@@ -18,7 +18,7 @@ if [ $1 ]; then
     export GOROOT_BOOTSTRAP=$(go env GOROOT)
     export GOROOT_FINAL=~/go$1
     pushd go/src
-    ./all.bash
+    ./make.bash
     popd
     mv -v go $GOROOT_FINAL
     ln -snfv $GOROOT_FINAL ~/go
