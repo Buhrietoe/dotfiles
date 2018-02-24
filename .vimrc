@@ -20,6 +20,7 @@ Plugin 'beigebrucewayne/Turtles'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'roxma/SimpleAutoComplPop'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Language specific
 Plugin 'klen/python-mode'
@@ -135,10 +136,9 @@ nnoremap <F3> :set invnumber<CR>
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bdelete<CR>
-nnoremap <C-n> :enew<CR>
 
 " Convert between yaml and json
-function Y2J()
+function! Y2J()
     if &filetype == 'yaml'
 	exec "%!y2j -"
 	if v:shell_error == 0
