@@ -98,7 +98,7 @@ set background=dark
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
@@ -154,6 +154,5 @@ endfunction
 nnoremap <leader>c :call Y2J()<CR>
 
 " Syntax Colors
-set t_Co=256
 colorscheme monokai
 syn on

@@ -42,7 +42,6 @@ alias ds='docker stack'
 
 # exports
 export PATH=~/bin:$PATH
-export TERM='xterm'
 export EDITOR='vim'
 export GOPATH=$HOME
 export JAVA_HOME=/usr/lib/jvm/default
