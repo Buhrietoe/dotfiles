@@ -43,7 +43,6 @@ alias ds='docker stack'
 # exports
 export PATH=~/bin:$PATH
 export EDITOR='vim'
-export GOPATH=$HOME
 export JAVA_HOME=/usr/lib/jvm/default
 
 # Prompt colors
