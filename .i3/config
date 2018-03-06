@@ -32,6 +32,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
+# start ipython
+bindsym $mod+Shift+Return exec urxvt -e ipython
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
