@@ -43,12 +43,12 @@ let g:pymode_rope = 0
 
 " vim-go
 function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#cmd#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
+    let l:file = expand('%')
+    if l:file =~# '^\f\+_test\.go$'
+        call go#cmd#Test(0, 1)
+    elseif l:file =~# '^\f\+\.go$'
+        call go#cmd#Build(0)
+    endif
 endfunction
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
@@ -140,15 +140,15 @@ nnoremap <C-l> :bdelete<CR>
 " Convert between yaml and json
 function! Y2J()
     if &filetype == 'yaml'
-	exec "%!y2j -"
-	if v:shell_error == 0
-	    exec "set filetype=json"
-	endif
+        exec "%!y2j -"
+        if v:shell_error == 0
+            exec "set filetype=json"
+        endif
     elseif &filetype == 'json'
-	exec "%!j2y -"
-	if v:shell_error == 0
-	    exec "set filetype=yaml"
-	endif
+        exec "%!j2y -"
+        if v:shell_error == 0
+            exec "set filetype=yaml"
+        endif
     endif
 endfunction
 nnoremap <leader>c :call Y2J()<CR>
