@@ -19,12 +19,11 @@ Plugin 'beigebrucewayne/Turtles'
 " Helpers
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'roxma/SimpleAutoComplPop'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
 
 " Language specific
 Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
 
@@ -60,11 +59,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
-" SimpleAutoComplPop
-autocmd FileType go call sacp#enableForThisBuffer({ "matches": [
-    \ { '=~': '\v[a-zA-Z]{2}$' , 'feedkeys': "\<C-x>\<C-n>"} ,
-    \ { '=~': '\.$'            , 'feedkeys': "\<Plug>(sacp_cache_fuzzy_omnicomplete)", "ignoreCompletionMode":1} ,
-    \ ]})
+" YouCompleteMe
+let g:ycm_python_binary_path = 'python3'
 
 " Filetype specific settings
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
