@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'easymotion/vim-easymotion'
 
 " Language specific
 Plugin 'klen/python-mode'
