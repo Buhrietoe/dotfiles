@@ -73,7 +73,7 @@ autocmd FileType yaml setlocal shiftwidth=2
 
 " vim settings
 let mapleader=","
-set timeout timeoutlen=1500
+set timeout timeoutlen=500
 set ttyfast
 set ttymouse=xterm2
 set ttyscroll=3
