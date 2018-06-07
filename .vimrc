@@ -132,7 +132,7 @@ nnoremap <F3> :set invnumber<CR>
 " Buffer control
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
-nnoremap <C-l> :bdelete<CR>
+nnoremap <C-l> :bd<CR>:bp #<CR>
 
 " Convert between yaml and json
 function! Y2J()
