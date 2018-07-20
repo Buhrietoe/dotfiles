@@ -1,30 +1,40 @@
 [user]
-  name = Jason Gardner
-  email = buhrietoe@gmail.com
+    name = Jason Gardner
+    email = buhrietoe@gmail.com
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
 
 [merge]
-  tool = vimdiff
-  log = true
+    tool = vimdiff
+    log = true
 
 [push]
-  default = current
+    default = current
 
 [help]
-  autocorrect = 1
+    autocorrect = 1
 
 [alias]
-  st = status
-  co = checkout
-  br = branch
-  p = pull -p
-  r = remote -v
+    st = status
+    co = checkout
+    br = branch
+    p = pull -p
+    r = remote -v
 
 [branch "master"]
-  remote = origin
-  merge = master
+    remote = origin
+    merge = master
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[diff "ansible-vault"]
+    textconv = ansible-vault view
+    cachetextconv = true
