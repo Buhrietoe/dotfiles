@@ -24,6 +24,7 @@
     br = branch
     p = pull -p
     r = remote -v
+    fi = diff-tree --name-only --pretty="" -r
 
 [branch "master"]
     remote = origin
