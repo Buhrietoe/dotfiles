@@ -82,6 +82,18 @@ function dclean() {
     docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
+# Checkout files from a specific commit without a merge
+function gicof() {
+    if [ -z "$1" ]; then
+        echo Specify branch/commit
+        exit 1
+    else
+        for i in $(git diff-tree --name-only --pretty="" -r $1); do
+            git show $1:$i > $i
+        done
+    fi
+}
+
 # Prompt function that shows current git branch and dirty status
 function set_prompt() {
   # Git branch / dirtiness
