@@ -14,12 +14,11 @@ Plugin 'mhinz/vim-signify'
 
 " Color
 Plugin 'crusoexia/vim-monokai'
-Plugin 'beigebrucewayne/Turtles'
 
 " Helpers
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 
@@ -36,6 +35,7 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'jellybeans'
 let g:airline_powerline_fonts = 1
+autocmd FileType go setlocal omnifunc=go#complete#Complete
 
 " python-mode tweaks
 let g:pymode_folding = 0
@@ -59,9 +59,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
-
-" YouCompleteMe
-let g:ycm_python_binary_path = 'python3'
 
 " Filetype specific settings
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
