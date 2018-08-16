@@ -3,6 +3,7 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 start-pulseaudio-x11 &
 xbindkeys &
+setxkbmap -option caps:escape &
 feh --bg-fill ~/downloads/bg.png
 
 exec i3
