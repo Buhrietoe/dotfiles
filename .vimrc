@@ -84,6 +84,7 @@ set autowrite
 set backspace=indent,eol,start
 set incsearch
 set autoindent
+set redrawtime=5000
 set showmode
 set showcmd
 set smartcase
