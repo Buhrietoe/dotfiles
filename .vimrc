@@ -130,6 +130,9 @@ nnoremap <F2> :NERDTreeToggle<CR>
 " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
 
+" GTFO
+nnoremap Q :qa<CR>
+
 " Buffer control
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
