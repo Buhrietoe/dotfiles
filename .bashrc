@@ -23,27 +23,33 @@ alias ls='ls --color=auto'
 alias l='ls -AFhl'
 alias ll='ls -AFhl | less'
 alias t='journalctl -n 20'
-alias pu='nice pacaur -Syu'
-alias yup='sudo nice yum upgrade'
-alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
-alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
-alias py='source ~/py/bin/activate && echo Python environment activated'
-alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
-alias pipup='pip freeze --local | grep -v "^\-e" | cut -d = -f 1 | xargs pip install --upgrade'
 alias purgeswap='sudo swapoff -a && sudo swapon -a'
 alias webcam='mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 30'
 alias screenoff='sleep 1 && xset dpms force off'
 alias nobs='sed "/^ *$/d;/^ *#/d"'
+
+# package manager aliases
+alias pu='nice pacaur -Syu'
+alias yup='sudo nice yum upgrade'
+alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
+alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
+
+# docker aliases
 alias dvi='dockviz images --tree -i'
 alias dr='docker run -it --rm'
 alias di='docker images'
 alias dp='docker ps -a'
 alias ds='docker stack'
 
+# other updates
+alias vup='vim +PluginClean +q +PluginUpdate +qa'
+alias py='source ~/py/bin/activate && echo Python environment activated'
+alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
+alias pipup='pip freeze --local | grep -v "^\-e" | cut -d = -f 1 | xargs pip install --upgrade'
+
 # exports
 export PATH=~/bin:$PATH
 export EDITOR='vim'
-export JAVA_HOME=/usr/lib/jvm/default
 
 # Prompt colors
 CLR_RESET='\[\e[0m\]'
