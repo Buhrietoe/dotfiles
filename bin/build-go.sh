@@ -7,19 +7,30 @@
 set -e
 
 if [ $1 ]; then
-    # Download and extract
+    # download and extract
     if [ ! -f "go$1.src.tar.gz" ]; then
 	curl -LO "https://dl.google.com/go/go$1.src.tar.gz"
     fi
     rm -rf go
     tar -xvf "go$1.src.tar.gz" || true
 
-    # Build
+    # build
     export GOROOT_BOOTSTRAP=$(go env GOROOT)
     export GOROOT_FINAL=~/go$1
     pushd go/src
     ./make.bash
     popd
+
+    # cleanup
+    gohostos=$(go env GOHOSTOS)
+    gohostarch=$(go env GOHOSTARCH)
+    rm -rf "go/pkg/${gohostos}_${gohostarch}"* 
+    rm -rf go/pkg/bootstrap
+    rm -rf go/pkg/obj
+    rm -rf go/misc
+    rm -rf go/test
+
+    # install
     mv -v go $GOROOT_FINAL
     ln -snfv $GOROOT_FINAL ~/go
 else
