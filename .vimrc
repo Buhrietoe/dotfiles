@@ -24,7 +24,7 @@ Plugin 'easymotion/vim-easymotion'
 
 " Language specific
 Plugin 'klen/python-mode'
-Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
@@ -35,7 +35,6 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'jellybeans'
 let g:airline_powerline_fonts = 1
-autocmd FileType go setlocal omnifunc=go#complete#Complete
 
 " python-mode tweaks
 let g:pymode_folding = 0
@@ -64,12 +63,16 @@ let g:go_highlight_generate_tags = 1
 let g:SuperTabDefaultCompletionType = "context"
 
 " Filetype specific settings
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>r <Plug>(go-run)
-autocmd FileType go nmap <leader>d <Plug>(go-doc)
-autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
-autocmd FileType go setlocal tabstop=4
-autocmd FileType yaml setlocal shiftwidth=2
+augroup AutoFileTypes
+    autocmd!
+    autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+    autocmd FileType go nmap <leader>r <Plug>(go-run)
+    autocmd FileType go nmap <leader>d <Plug>(go-doc)
+    autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
+    autocmd FileType go setlocal tabstop=4
+    autocmd FileType go setlocal omnifunc=go#complete#Complete
+    autocmd FileType yaml setlocal shiftwidth=2
+augroup END
 
 " vim settings
 let mapleader=","
