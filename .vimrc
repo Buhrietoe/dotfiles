@@ -58,6 +58,9 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+let g:go_gocode_propose_builtins = 1
+let g:go_gocode_propose_source = 1
+let g:go_gocode_unimported_packages = 1
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
