@@ -148,6 +148,9 @@ nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bp<CR>:bd #<CR>
 
+" Reload vimrc
+nnoremap <leader>. :source $MYVIMRC<CR>
+
 " Convert between yaml and json
 function! Y2J()
     if &filetype == 'yaml'
