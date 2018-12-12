@@ -21,12 +21,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'easymotion/vim-easymotion'
 
 " Language specific
-Plugin 'klen/python-mode'
-Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plugin 'rust-lang/rust.vim'
+"Plugin 'klen/python-mode'
+"Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
