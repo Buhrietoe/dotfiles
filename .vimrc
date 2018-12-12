@@ -19,6 +19,7 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 
@@ -64,6 +65,9 @@ let g:go_gocode_unimported_packages = 1
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
+
+" youcompleteme
+let g:ycm_min_num_of_chars_for_completion = 0
 
 " Filetype specific settings
 augroup AutoFileTypes
