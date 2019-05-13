@@ -150,6 +150,9 @@ nnoremap <C-l> :bp<CR>:bd #<CR>
 " Reload vimrc
 nnoremap <leader>. :source $MYVIMRC<CR>
 
+" Quote selection
+vnoremap <leader>' :s/\%V\(.*\)\%V/"\1"/<CR>
+
 " Convert between yaml and json
 function! Y2J()
     if &filetype == 'yaml'
