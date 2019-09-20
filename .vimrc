@@ -44,7 +44,7 @@ let g:pymode_rope = 0
 function! s:build_go_files()
     let l:file = expand('%')
     if l:file =~# '^\f\+_test\.go$'
-        call go#cmd#Test(0, 1)
+        call go#test#Test(0, 1)
     elseif l:file =~# '^\f\+\.go$'
         call go#cmd#Build(0)
     endif
@@ -72,6 +72,7 @@ let g:ycm_min_num_of_chars_for_completion = 0
 augroup AutoFileTypes
     autocmd!
     autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+    autocmd FileType go nmap <leader>t <Plug>(go-test)
     autocmd FileType go nmap <leader>r <Plug>(go-run)
     autocmd FileType go nmap <leader>d <Plug>(go-doc)
     autocmd FileType go nmap <leader>l <Plug>(go-metalinter)
