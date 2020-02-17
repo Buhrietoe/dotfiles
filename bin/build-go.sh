@@ -18,10 +18,16 @@ if [ $1 ]; then
 
     # build
     export GOROOT_BOOTSTRAP=$(go env GOROOT)
-    export GOROOT_FINAL=~/go$1
+    if [ $2 ]; then
+        export GOARCH=$2
+        export GOROOT_FINAL=~/go$1-$2
+    else
+        export GOROOT_FINAL=~/go$1
+    fi
+
     pushd go/src
-    #./make.bash
-    ./all.bash
+    nice ./make.bash
+    #nice ./all.bash
     popd
 
     # cleanup
@@ -32,13 +38,27 @@ if [ $1 ]; then
     rm -rf go/pkg/obj
     rm -rf go/misc
     rm -rf go/test
+    if [ $2 ]; then
+        rm -rf go/pkg/tool/${gohostos}_${gohostarch}
+        rm -rf go/pkg/${gohostos}_${2}
+        rm -f go/bin/go
+        rm -f go/bin/gofmt
+        mv go/bin/${gohostos}_${2}/* go/bin/
+        rmdir go/bin/${gohostos}_${2}
+    fi
 
     # install
     if [ -d "$GOROOT_FINAL" ]; then
         rm -rf "$GOROOT_FINAL"
     fi
-    mv -v go $GOROOT_FINAL
-    ln -snfv $GOROOT_FINAL ~/go
+    if [ ! $2 ]; then
+        mv -v go $GOROOT_FINAL
+        ln -snfv $GOROOT_FINAL ~/go
+    fi
+
+    # clean cache
+    echo Cleaning cache...
+    go clean -cache -modcache
 else
     echo "specify version. Ex: 1.9.3"
     exit 1
