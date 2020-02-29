@@ -46,7 +46,8 @@ alias vup='vim +PluginClean +q +PluginUpdate +qa'
 alias py='source ~/py/bin/activate && echo Python environment activated'
 alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
 alias pipup='pip freeze --local --all | grep -v "^\-e" | cut -d = -f 1 | xargs pip install --upgrade'
-alias gb='CGO_ENABLED=0 go build -v -ldflags "-w -s" .'
+alias gb='go build -v -ldflags "-w -s" .'
+alias gbs='CGO_ENABLED=0 go build -v -ldflags "-extldflags \"-static\" -w -s" .'
 
 # exports
 export PATH=~/bin:$PATH
