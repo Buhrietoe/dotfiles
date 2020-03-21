@@ -42,7 +42,7 @@ alias dp='docker ps -a'
 alias ds='docker stack'
 
 # other updates
-alias vup='vim +PluginClean +q +PluginUpdate +qa'
+alias vup='vim +PluginClean +q +PluginUpdate +q +GoUpdateBinaries +q'
 alias py='source ~/py/bin/activate && echo Python environment activated'
 alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
 alias pipup='pip freeze --local --all | grep -v "^\-e" | cut -d = -f 1 | xargs pip install --upgrade'
