@@ -58,7 +58,7 @@ if [ $1 ]; then
 
     # clean cache
     echo Cleaning cache...
-    go clean -cache -modcache
+    go clean -cache
 else
     echo "specify version. Ex: 1.9.3"
     exit 1
