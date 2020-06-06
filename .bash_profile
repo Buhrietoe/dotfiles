@@ -1,1 +1,3 @@
-[ -f ~/.bashrc ] && . ~/.bashrc
+if [ -n "$SSH_CONNECTION" ]; then
+    [ -f ~/.bashrc ] && . ~/.bashrc
+fi
