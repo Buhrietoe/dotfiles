@@ -39,3 +39,6 @@
 [diff "ansible-vault"]
     textconv = ansible-vault view
     cachetextconv = true
+
+[pull]
+    rebase = false
