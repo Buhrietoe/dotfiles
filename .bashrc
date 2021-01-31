@@ -84,6 +84,11 @@ function title() {
   echo -en "\033]0;$@\a"
 }
 
+# Remove pacman orphans
+function pro() {
+    pacman -Qtdq | sudo pacman -Rns -
+}
+
 # Clean stopped containers
 function dclean() {
     docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
