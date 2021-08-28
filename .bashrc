@@ -29,7 +29,7 @@ alias screenoff='sleep 1 && xset dpms force off'
 alias nobs='sed "/^ *$/d;/^ *#/d"'
 
 # package manager aliases
-alias pu='nice pikaur -Syu'
+alias pu='nice yay'
 alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
