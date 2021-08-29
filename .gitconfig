@@ -26,10 +26,6 @@
     r = remote -v
     fi = diff-tree --name-only --pretty="" -r
 
-[branch "master"]
-    remote = origin
-    merge = master
-
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
