@@ -7,54 +7,25 @@ Xft.rgba: rgb
 Xft.hinting: 1
 Xft.hintstyle: hintfull
 
-! Colors based on github.com/altercation/solarized
-! Common colors --------------------------------------------------------
-!#define S_yellow #b58900
-!#define S_orange #cb4b16
-!#define S_red #dc322f
-!#define S_magenta #d33682
-!#define S_violet #6c71c4
-!#define S_blue #268bd2
-!#define S_cyan #2aa198
-!#define S_green #409900
-!#define S_black #000000
-
-!! Base colors ----------------------------------------------------------
-!#define S_base03 #002b36
-!#define S_base02 #073642
-!#define S_base01 #586e75
-!#define S_base00 #657b83
-!#define S_base0 #839496
-!#define S_base1 #93a1a1
-!#define S_base2 #eee8d5
-!#define S_base3 #fdf6e3
-
 !! Set the default colors -----------------------------------------------
-*background: black
-*foreground: grey
-!*background: S_black
-!*foreground: S_base0
-!*fading: 30
-!*fadeColor: S_base03
-!*cursorColor: S_base1
-!*pointerColorBackground: S_base01
-!*pointerColorForeground: S_base1
-!*color0: S_base02
-!*color1: S_red
-!*color2: S_green
-!*color3: S_yellow
-!*color4: S_blue
-!*color5: S_magenta
-!*color6: S_cyan
-!*color7: S_base2
-!*color9: S_orange
-!*color8: S_base03
-!*color10: S_base01
-!*color11: S_base00
-!*color12: S_base0
-!*color13: S_violet
-!*color14: S_base1
-!*color15: S_base3
+*background: rgb:00/00/00
+*foreground: rgb:a8/a8/a8
+*color0:     rgb:00/00/00
+*color1:     rgb:a8/00/00
+*color2:     rgb:00/a8/00
+*color3:     rgb:a8/54/00
+*color4:     rgb:00/00/a8
+*color5:     rgb:a8/00/a8
+*color6:     rgb:00/a8/a8
+*color7:     rgb:a8/a8/a8
+*color8:     rgb:54/50/54
+*color9:     rgb:f8/54/50
+*color10:    rgb:50/fc/50
+*color11:    rgb:f8/fc/50
+*color12:    rgb:50/54/f8
+*color13:    rgb:f8/54/f8
+*color14:    rgb:50/fc/f8
+*color15:    rgb:f8/fc/f8
 
 ! xterm ----------------------------------------------------------------
 xterm*saveLines: 1000
