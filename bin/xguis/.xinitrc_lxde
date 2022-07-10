@@ -1,5 +1,7 @@
 #!/bin/sh
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+xbindkeys &
+setxkbmap -option caps:escape &
 
 exec startlxde

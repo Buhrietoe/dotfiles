@@ -1,7 +1,5 @@
 #!/bin/sh
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-#start-pulseaudio-x11 &
-#hsetroot -fill ~/Pictures/bg.png
 
 exec openbox-session
