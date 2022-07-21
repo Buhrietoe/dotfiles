@@ -1,34 +1,32 @@
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Plugin manager
-Plugin 'VundleVim/Vundle.vim'
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
 
 " Its pretty
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mhinz/vim-signify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mhinz/vim-signify'
 
 " Color
-Plugin 'crusoexia/vim-monokai'
+Plug 'crusoexia/vim-monokai'
 
 " Helpers
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ervandew/supertab'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jvirtanen/vim-hcl'
 
 " Language specific
-"Plugin 'klen/python-mode'
-"Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-"Plugin 'rust-lang/rust.vim'
+"Plug 'klen/python-mode'
+"Plug 'fatih/vim-go'
+"Plug 'rust-lang/rust.vim'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 
 " airline tweaks
