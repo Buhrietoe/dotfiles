@@ -34,12 +34,10 @@ alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo apt-get dist-upgrade'
 
-# docker aliases
-alias dvi='dockviz images --tree -i'
-alias dr='docker run -it --rm'
-alias di='docker images'
-alias dp='docker ps -a'
-alias ds='docker stack'
+# podman aliases
+alias dr='podman run -it --rm'
+alias di='podman images'
+alias dp='podman ps -a'
 
 # other updates
 alias vup='vim +PlugClean +q +PlugUpgrade +PlugUpdate +q +GoUpdateBinaries +q'
@@ -91,8 +89,8 @@ function pro() {
 
 # Clean stopped containers
 function dclean() {
-    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+    podman rm -v $(podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    podman rmi $(podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 # Checkout files from a specific commit without a merge
