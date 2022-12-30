@@ -75,12 +75,12 @@ CLR_BWHITE='\[\e[1;37m\]'
 
 # Create ssh key pair
 function keygen() {
-  ssh-keygen -t rsa -b 4096 -N '' -C "$@ $(date +%F)" -f "$@"
+    ssh-keygen -t rsa -b 4096 -N '' -C "$@ $(date +%F)" -f "$@"
 }
 
 # Set terminal window title
 function title() {
-  echo -en "\033]0;$@\a"
+    echo -en "\033]0;$@\a"
 }
 
 # Remove pacman orphans
@@ -104,6 +104,11 @@ function gicof() {
             git show $1:$i > $i
         done
     fi
+}
+
+# Pretty git logs
+function gitlog() {
+    git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
 }
 
 # Prompt function that shows current git branch and dirty status
