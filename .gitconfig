@@ -24,7 +24,6 @@
     br = branch
     p = pull -p
     r = remote -v
-    fi = diff-tree --name-only --pretty="" -r
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
