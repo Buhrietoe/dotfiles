@@ -66,6 +66,10 @@ let g:SuperTabDefaultCompletionType = "context"
 " youcompleteme
 let g:ycm_min_num_of_chars_for_completion = 0
 
+" other
+let g:is_bash = 1
+let g:sh_no_error= 1
+
 " Filetype specific settings
 augroup AutoFileTypes
     autocmd!

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # bash options
 # notify of background process completion
 set -b
@@ -13,6 +16,8 @@ shopt -s checkwinsize
 # try to correct typing mistakes on directories
 shopt -s cdspell
 shopt -s dirspell
+
+clear
 
 # aliases
 alias ..='cd ..'
@@ -110,6 +115,17 @@ function gicof() {
 function gitlog() {
     git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
 }
+
+# Manage ssh agent with keychain
+if [ -x "$(command -v keychain)" ]; then
+    keys=""
+    for file in ~/.ssh/*; do
+      if [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"*"PRIVATE KEY-----" ]]; then
+        keys+="$file "
+      fi
+    done
+    eval $(keychain --eval --agents ssh $keys)
+fi
 
 # Prompt function that shows current git branch and dirty status
 function set_prompt() {
