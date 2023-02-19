@@ -37,6 +37,7 @@ bindsym $mod+Shift+Return exec urxvt -e ipython
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec dmenu_run -l 5 -i -nb "#3c0b4d" -nf "#cccccc"
@@ -136,7 +137,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -164,21 +165,44 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+for_window [all] title_format "%class | %title", title_window_icon padding 3px
+for_window [class="mpv"] floating enable
+for_window [title="Desktop — Plasma"] kill
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="systemsettings"] floating enable
+for_window [title="System Activity"] floating enable
+for_window [class="Plasma"] floating enable, border none
+for_window [title="plasma-desktop"] floating enable, border none
+for_window [class="krunner"] floating enable, border none
+for_window [class="Kmix"] floating enable, border none
+for_window [class="Klipper"] floating enable, border none
+for_window [class="Plasmoidviewer"] floating enable, border none
+for_window [class="plasmashell"] floating enable
+for_window [class="plasmashell" window_type="notification"] border none, move position 70 ppt 81 ppt
+no_focus [class="plasmashell" window_type="notification"]
+bindsym XF86AudioRaiseVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
+bindsym XF86AudioLowerVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
+bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
+bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
+bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3status
-  colors {
-    background #101010
-    statusline #cccccc
-    separator #555555
-
-    focused_workspace  #ee7722 #80145c #cccccc
-    active_workspace   #404080 #3c0b4d #cccccc
-    inactive_workspace #404080 #1c134c #888888
-    urgent_workspace   #3c0b4d #ee7722 #000000
-  }
-}
+#bar {
+#  status_command i3status
+#  mode hide
+#  colors {
+#    background #101010
+#    statusline #cccccc
+#    separator #555555
+#
+#    focused_workspace  #ee7722 #80145c #cccccc
+#    active_workspace   #404080 #3c0b4d #cccccc
+#    inactive_workspace #404080 #1c134c #888888
+#    urgent_workspace   #3c0b4d #ee7722 #000000
+#  }
+#}
 
 # Colors
 client.focused #ee7722 #80145c #cccccc #bb22ee
@@ -187,6 +211,6 @@ client.unfocused #404080 #1c134c #888888 #bb22ee
 client.urgent #3c0b4d #ee7722 #000000 #bb22ee
 
 # Autostart
-exec --no-startup-id feh --bg-fill ~/downloads/bg.jpg
-exec --no-startup-id xbindkeys
-exec --no-startup-id xrdb -merge ~/.Xresources
+exec_always --no-startup-id feh --bg-fill ~/downloads/bg.jpg
+#exec_always --no-startup-id xbindkeys
+exec_always --no-startup-id xrdb -merge ~/.Xresources
