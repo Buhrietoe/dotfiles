@@ -167,7 +167,7 @@ bindsym $mod+r mode "resize"
 
 for_window [all] title_format "%class | %title", title_window_icon padding 3px
 for_window [class="mpv"] floating enable
-for_window [title="Desktop — Plasma"] kill
+for_window [class="plasmashell" title="Desktop*"] kill
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="systemsettings"] floating enable
