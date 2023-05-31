@@ -189,20 +189,20 @@ bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#  status_command i3status
-#  mode hide
-#  colors {
-#    background #101010
-#    statusline #cccccc
-#    separator #555555
-#
-#    focused_workspace  #ee7722 #80145c #cccccc
-#    active_workspace   #404080 #3c0b4d #cccccc
-#    inactive_workspace #404080 #1c134c #888888
-#    urgent_workspace   #3c0b4d #ee7722 #000000
-#  }
-#}
+bar {
+  status_command i3status
+  mode hide
+  colors {
+    background #101010
+    statusline #cccccc
+    separator #555555
+
+    focused_workspace  #ee7722 #80145c #cccccc
+    active_workspace   #404080 #3c0b4d #cccccc
+    inactive_workspace #404080 #1c134c #888888
+    urgent_workspace   #3c0b4d #ee7722 #000000
+  }
+}
 
 # Colors
 client.focused #ee7722 #80145c #cccccc #bb22ee
