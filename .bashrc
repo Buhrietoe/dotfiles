@@ -17,8 +17,6 @@ shopt -s checkwinsize
 shopt -s cdspell
 shopt -s dirspell
 
-clear
-
 # aliases
 alias ..='cd ..'
 alias ...='cd ../..'

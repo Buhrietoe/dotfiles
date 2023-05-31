@@ -173,5 +173,5 @@ endfunction
 nnoremap <leader>c :call Y2J()<CR>
 
 " Syntax Colors
-colorscheme monokai
+colorscheme slate
 syn on
