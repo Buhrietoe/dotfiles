@@ -38,9 +38,9 @@ alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo nice apt-get dist-upgrade'
 
 # podman aliases
-alias dr='sudo podman run -it --rm'
-alias di='sudo podman images'
-alias dp='sudo podman ps -a'
+alias dr='podman run -it --rm'
+alias di='podman images'
+alias dp='podman ps -a'
 
 # other updates
 alias vup='nice vim +PlugClean +q +PlugUpgrade +PlugUpdate +q +GoUpdateBinaries +q'
