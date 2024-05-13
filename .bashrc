@@ -93,8 +93,8 @@ function pro() {
 
 # Clean stopped containers
 function dclean() {
-    sudo podman rm -v $(sudo podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-    sudo podman rmi $(sudo podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+    podman rm -v $(podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    podman rmi $(podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 # Checkout files from a specific commit without a merge
