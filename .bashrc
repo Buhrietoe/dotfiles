@@ -52,7 +52,7 @@ alias gbs='CGO_ENABLED=0 go build -v -ldflags "-extldflags \"-static\" -w -s" .'
 
 # exports
 export PATH=~/bin:$PATH
-export EDITOR='vim'
+export EDITOR=nvim
 export HISTCONTROL=ignoreboth
 
 # Prompt colors
