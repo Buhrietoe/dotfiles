@@ -205,20 +205,20 @@ bar {
   colors {
     background #101010
     statusline #cccccc
-    separator #555555
+    separator #888888
 
-    focused_workspace  #ee7722 #80145c #cccccc
-    active_workspace   #404080 #3c0b4d #cccccc
-    inactive_workspace #404080 #1c134c #888888
-    urgent_workspace   #3c0b4d #ee7722 #000000
+    focused_workspace  #cccc11 #553388 #ffffff
+    active_workspace   #999900 #221133 #ffffff
+    inactive_workspace #404040 #111111 #888888
+    urgent_workspace   #333333 #ee7722 #000000
   }
 }
 
 # Colors
-client.focused #ee7722 #80145c #cccccc #bb22ee
-client.focused_inactive #404080 #3c0b4d #cccccc #bb22ee
-client.unfocused #404080 #1c134c #888888 #bb22ee
-client.urgent #3c0b4d #ee7722 #000000 #bb22ee
+client.focused #cccc11 #553388 #cccccc #cccc11
+client.focused_inactive #404040 #221133 #cccccc #cccc11
+client.unfocused #404040 #222244 #888888 #cccc11
+client.urgent #404040 #cccc11 #000000 #cccc11
 
 # Autostart
 exec_always --no-startup-id feh --bg-fill ~/downloads/bg.jpg
