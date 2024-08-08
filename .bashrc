@@ -78,81 +78,84 @@ CLR_BWHITE='\[\e[1;37m\]'
 
 # Create ssh key pair
 function keygen() {
-    ssh-keygen -t rsa -b 4096 -N '' -C "$@ $(date +%F)" -f "$@"
+	ssh-keygen -t rsa -b 4096 -N '' -C "$@ $(date +%F)" -f "$@"
 }
 
 # Set terminal window title
 function title() {
-    echo -en "\033]0;$@\a"
+	echo -en "\033]0;$@\a"
 }
 
 # Remove pacman orphans
 function pro() {
-    pacman -Qtdq | sudo pacman -Rns -
+	pacman -Qtdq | sudo pacman -Rns -
 }
 
 # Clean stopped containers
 function dclean() {
-    podman rm -v $(podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-    podman rmi $(podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+	podman rm -v $(podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+	podman rmi $(podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 # Checkout files from a specific commit without a merge
 function gicof() {
-    if [ -z "$1" ]; then
-        echo Specify branch/commit
-        exit 1
-    else
-        for i in $(git diff-tree --name-only --pretty="" -r $1); do
-            git show $1:$i > $i
-        done
-    fi
+	if [ -z "$1" ]; then
+		echo Specify branch/commit
+		exit 1
+	else
+		for i in $(git diff-tree --name-only --pretty="" -r $1); do
+			git show $1:$i >$i
+		done
+	fi
 }
 
 # Pretty git logs
 function gitlog() {
-    git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
+	git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
 }
 
 # Manage ssh agent with keychain
 if [ -x "$(command -v keychain)" ]; then
-    keys=""
-    for file in ~/.ssh/*; do
-      if [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"*"PRIVATE KEY-----" ]]; then
-        keys+="$file "
-      fi
-    done
-    eval $(keychain --eval --agents ssh $keys)
+	keys=""
+	for file in ~/.ssh/*; do
+		if [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"*"PRIVATE KEY-----" ]]; then
+			keys+="$file "
+		fi
+	done
+	eval $(keychain --eval --agents ssh $keys)
 fi
 
 # Prompt function that shows current git branch and dirty status
 function set_prompt() {
-  # Git branch / dirtiness
-  if git update-index -q --refresh 2>/dev/null; git diff-index --quiet --cached HEAD --ignore-submodules -- 2>/dev/null && git diff-files --quiet --ignore-submodules 2>/dev/null
-    then dirty=""
-  else
-    dirty="${CLR_RED}*"
-  fi
+	# Git branch / dirtiness
+	if
+		git update-index -q --refresh 2>/dev/null
+		git diff-index --quiet --cached HEAD --ignore-submodules -- 2>/dev/null && git diff-files --quiet --ignore-submodules 2>/dev/null
+	then
+		dirty=""
+	else
+		dirty="${CLR_RED}*"
+	fi
 
-  _branch=$(git symbolic-ref HEAD 2>/dev/null)
-  _branch=${_branch#refs/heads/}
-  branch="" # need this to clear it when we leave a repo
-  if [[ -n $_branch ]]; then
-    branch="${CLR_WHITE}[${CLR_PURPLE}${_branch}${dirty}${CLR_WHITE}]"
-  fi
+	_branch=$(git symbolic-ref HEAD 2>/dev/null)
+	_branch=${_branch#refs/heads/}
+	branch="" # need this to clear it when we leave a repo
+	if [[ -n $_branch ]]; then
+		branch="${CLR_WHITE}[${CLR_PURPLE}${_branch}${dirty}${CLR_WHITE}]"
+	fi
 
-  export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_GREEN\h$CLR_BWHITE:$CLR_RESET\w${branch}\n$CLR_WHITE# $CLR_RESET"
+	export PS1="$CLR_GREEN\u$CLR_WHITE@$CLR_GREEN\h$CLR_BWHITE:$CLR_RESET\w${branch}\n$CLR_WHITE# $CLR_RESET"
 }
 
 PROMPT_COMMAND=set_prompt
 
 # set console colors same as Xresources
-if [ "$TERM" = "linux" ]; then
-    _SEDCMD='s/.*\*color\([0-9]\{1,\}\).*#\([0-9a-fA-F]\{6\}\).*/\1 \2/p'
-    for i in $(sed -n "$_SEDCMD" $HOME/.Xresources | awk '$1 < 16 {printf "\\e]P%X%s", $1, $2}'); do
-        echo -en "$i"
-    done
-fi
+#if [ "$TERM" = "linux" ]; then
+#    _SEDCMD='s/.*\*color\([0-9]\{1,\}\).*#\([0-9a-fA-F]\{6\}\).*/\1 \2/p'
+#    for i in $(sed -n "$_SEDCMD" $HOME/.Xresources | awk '$1 < 16 {printf "\\e]P%X%s", $1, $2}'); do
+#        echo -en "$i"
+#    done
+#fi
 
 # local system specific config
 [ -f ~/.bash_local ] && . ~/.bash_local
