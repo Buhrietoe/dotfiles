@@ -6,18 +6,18 @@ echo "Creating systemd service... /etc/systemd/system/${SERVICENAME}.service"
 cat >/etc/systemd/system/$SERVICENAME.service <<EOF
 [Unit]
 Description=$SERVICENAME
-Requires=podman.service
-After=podman.service
+Requires=containerd.service
+After=containerd.service
 
 [Service]
 Restart=always
 WorkingDirectory=$(pwd)
 # Shutdown container (if running) when unit is started
-ExecStartPre=$(which podman-compose) -f docker-compose.yml down
+ExecStartPre=$(which nerdctl) compose -f docker-compose.yml down
 # Start container when unit is started
-ExecStart=$(which podman-compose) -f docker-compose.yml up
+ExecStart=$(which nerdctl) compose -f docker-compose.yml up
 # Stop container when unit is stopped
-ExecStop=$(which podman-compose) -f docker-compose.yml down
+ExecStop=$(which nerdctl) compose -f docker-compose.yml down
 
 [Install]
 WantedBy=multi-user.target

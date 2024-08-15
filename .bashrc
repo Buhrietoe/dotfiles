@@ -37,10 +37,10 @@ alias yup='sudo nice yum upgrade'
 alias gup='sudo nice emerge --update --deep --with-bdeps=y --newuse --ask world'
 alias aup='sudo nice apt-get update && sudo nice apt-get dist-upgrade'
 
-# podman aliases
-alias dr='podman run -it --rm'
-alias di='podman images'
-alias dp='podman ps -a'
+# nerdctl aliases
+alias dr='nerdctl run -it --rm'
+alias di='nerdctl images'
+alias dp='nerdctl ps -a'
 
 # other updates
 alias vup='nice vim +PlugClean +q +PlugUpgrade +PlugUpdate +q +GoUpdateBinaries +q'
@@ -93,8 +93,8 @@ function pro() {
 
 # Clean stopped containers
 function dclean() {
-	podman rm -v $(podman ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-	podman rmi $(podman images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+	nerdctl rm -v $(nerdctl ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+	nerdctl rmi $(nerdctl images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 # Checkout files from a specific commit without a merge
