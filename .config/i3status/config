@@ -8,20 +8,21 @@
 
 general {
     colors = true
-    interval = 1
+    interval = 5
 }
 
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "run_watch DHCP"
-order += "run_watch VPN"
 order += "cpu_usage"
+order += "load"
+order += "memory"
 order += "battery 0"
 order += "disk /"
 order += "tztime local"
 
 wireless _first_ {
-    format_up = "Wifi: (%quality at %essid) %ip"
+    format_up = "W: (%quality at %essid, %bitrate) %ip"
     format_down = "W: down"
 }
 
@@ -35,12 +36,18 @@ run_watch DHCP {
     pidfile = "/var/run/dhclient*.pid"
 }
 
-run_watch VPN {
-    pidfile = "/var/run/vpnc/pid"
-}
-
 cpu_usage {
     format = "CPU: %usage"
+}
+
+load {
+    format = "%1min %5min %15min"
+}
+
+memory {
+    format = "%used"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY: %free"
 }
 
 battery 0 {
