@@ -1,8 +1,0 @@
-#!/bin/sh
-
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-xbindkeys &
-setxkbmap -option caps:escape &
-feh --bg-fill ~/downloads/bg.png
-
-exec i3
