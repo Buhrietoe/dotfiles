@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-signify'
+Plug 'psliwka/vim-smoothie'
 
 " Color
 Plug 'crusoexia/vim-monokai'
@@ -17,9 +18,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'jvirtanen/vim-hcl'
 
 " Language specific
 "Plug 'klen/python-mode'
@@ -84,7 +83,7 @@ augroup AutoFileTypes
 augroup END
 
 " vim settings
-let mapleader=","
+let mapleader=" "
 set timeout timeoutlen=500
 set ttyfast
 set ttymouse=xterm2
@@ -113,6 +112,9 @@ set smarttab
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set number
+set relativenumber
+set scrolloff=10
+set sidescrolloff=10
 set hidden
 set nobackup
 set nowritebackup
@@ -137,18 +139,19 @@ inoremap <C-h> <left>
 inoremap <C-l> <right>
 
 " Toggle NERDTree
-nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 " Toggle line numbers
 nnoremap <F3> :set invnumber<CR>
 
 " GTFO
-nnoremap Q :qa<CR>
+nnoremap <leader>qq :qa<CR>
 
 " Buffer control
-nnoremap <C-j> :bn<CR>
-nnoremap <C-k> :bp<CR>
-nnoremap <C-l> :bp<CR>:bd #<CR>
+nnoremap <S-l> :bn<CR>
+nnoremap <S-h> :bp<CR>
+nnoremap <leader>bd :bp<CR>:bd #<CR>
+nnoremap <C-s> :w<CR>
 
 " Reload vimrc
 nnoremap <leader>. :source $MYVIMRC<CR>
@@ -173,5 +176,5 @@ endfunction
 nnoremap <leader>c :call Y2J()<CR>
 
 " Syntax Colors
-colorscheme slate
+colorscheme habamax
 syn on
