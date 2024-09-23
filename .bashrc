@@ -44,7 +44,7 @@ alias di='nerdctl images'
 alias dp='nerdctl ps -a'
 
 # other updates
-alias vup='nice vim +PlugClean +q +PlugUpgrade +PlugUpdate +q +GoUpdateBinaries +q'
+alias vup='nice vim +PlugClean +q +PlugUpgrade +PlugUpdate +q +q'
 alias py='source ~/py/bin/activate && echo Python environment activated'
 alias updatemirrors='sudo reflector -c "United States" -f 5 -p "http" --verbose --save /etc/pacman.d/mirrorlist'
 alias pipup='pip freeze --local --all | grep -v "^\-e" | cut -d = -f 1 | xargs pip install --upgrade'
