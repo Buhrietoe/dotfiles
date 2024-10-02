@@ -36,7 +36,6 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec urxvt -e ipython
 
 # kill focused window
-bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
@@ -143,7 +142,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -199,20 +198,20 @@ bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3status
-  mode hide
-  colors {
-    background #101010
-    statusline #cccccc
-    separator #888888
-
-    focused_workspace  #cccc11 #553388 #ffffff
-    active_workspace   #999900 #221133 #ffffff
-    inactive_workspace #404040 #111111 #888888
-    urgent_workspace   #333333 #ee7722 #000000
-  }
-}
+#bar {
+#  status_command i3status
+#  mode hide
+#  colors {
+#    background #101010
+#    statusline #cccccc
+#    separator #888888
+#
+#    focused_workspace  #cccc11 #553388 #ffffff
+#    active_workspace   #999900 #221133 #ffffff
+#    inactive_workspace #404040 #111111 #888888
+#    urgent_workspace   #333333 #ee7722 #000000
+#  }
+#}
 
 # Colors
 client.focused #cccc11 #553388 #cccccc #cccc11
