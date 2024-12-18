@@ -9,30 +9,37 @@ return {
     { "stevearc/dressing.nvim", opts = {} }, -- Optional: Improves `vim.ui.select`
     { "echasnovski/mini.diff", version = "*" },
   },
-  config = true,
-  opts = {
-    strategies = {
-      chat = {
-        adapter = "ollama",
+  config = function()
+    require("codecompanion").setup({
+      strategies = {
+        chat = {
+          adapter = "ollama",
+        },
+        inline = {
+          adapter = "ollama",
+        },
+        agent = {
+          adapter = "ollama",
+        },
       },
-      inline = {
-        adapter = "ollama",
+      adapters = {
+        ollama = function()
+          return require("codecompanion.adapters").extend("openai_compatible", {
+            env = {
+              url = "http://127.0.0.1:8080",
+              chat_url = "/v1/chat/completions",
+            },
+          })
+        end,
       },
-      agent = {
-        adapter = "ollama",
+      opts = {
+        log_level = "DEBUG",
       },
-    },
-    server = {
-      url = "127.0.0.1:11434",
-    },
-    model = "qwen2.5-coder:1.5b",
-    opts = {
-      log_level = "DEBUG",
-    },
-    display = {
-      diff = {
-        provider = "mini_diff",
+      display = {
+        diff = {
+          provider = "mini_diff",
+        },
       },
-    },
-  },
+    })
+  end,
 }
