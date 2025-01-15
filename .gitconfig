@@ -40,3 +40,6 @@
 
 [fetch]
     prune = true
+
+[credential]
+	helper = store
