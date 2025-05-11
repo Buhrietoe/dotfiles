@@ -123,7 +123,7 @@ if [ -x "$(command -v keychain)" ]; then
             keys+="$file "
         fi
     done
-    eval $(keychain --eval --agents ssh $keys)
+    eval $(keychain --eval $keys)
 fi
 
 # Prompt function that shows current git branch and dirty status

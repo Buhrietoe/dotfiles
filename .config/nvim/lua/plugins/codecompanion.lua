@@ -33,16 +33,19 @@ return {
       },
       adapters = {
         ollama = function()
-          return require("codecompanion.adapters").extend("openai_compatible", {
-            name = "llama.cpp",
+          return require("codecompanion.adapters").extend("ollama", {
+            name = "ollama",
             schema = {
               num_ctx = {
-                default = 16384,
+                default = 32768,
+              },
+              model = {
+                default = "qwen2.5-coder:1.5b",
               },
             },
             env = {
-              url = "http://127.0.0.1:8080",
-              chat_url = "/v1/chat/completions",
+              url = "http://127.0.0.1:11434",
+              api_key = "NONE",
             },
           })
         end,
