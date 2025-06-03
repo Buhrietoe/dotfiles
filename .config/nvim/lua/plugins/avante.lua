@@ -9,11 +9,29 @@ return {
     ollama = {
       endpoint = "http://localhost:11434",
       model = "qwen3:8b",
+      extra_request_body = {
+        think = false,
+      },
     },
     auto_suggestions_provider = "ollama",
     cursor_applying_provider = "ollama",
-    behavior = {
+    behavior = {},
+    features = {
+      web_search = false,
+      project_context = true,
+      file_search = true,
+    },
+    behaviour = {
       enable_cursor_planning_mode = true,
+      auto_suggestions = true,
+      jump_result_buffer_on_finish = true,
+      auto_focus_on_diff_view = true,
+      enable_token_counting = false,
+    },
+    mappings = {
+      sidebar = {
+        close_from_input = { normal = "q", insert = "<C-d>" },
+      },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
