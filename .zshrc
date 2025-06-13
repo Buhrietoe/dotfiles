@@ -134,13 +134,11 @@ function gitlog() {
 
 # Manage ssh agent with keychain
 if [ -x "$(command -v keychain)" ]; then
-    keys=""
     for file in ~/.ssh/*; do
         if [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"*"PRIVATE KEY-----" ]]; then
-            keys+="$file "
+            eval $(keychain -q --eval $file)
         fi
     done
-    eval $(keychain --eval $keys)
 fi
 
 #------------------------------
