@@ -1,5 +1,21 @@
 [font]
-normal = { family = "terminus", style = "Regular" }
+size = 12
+
+[font.bold]
+family = "terminessnerdfontmono"
+style = "Bold"
+
+[font.bold_italic]
+family = "terminessnerdfontmono"
+style = "Bold Italic"
+
+[font.italic]
+family = "terminessnerdfontmono"
+style = "Italic"
+
+[font.normal]
+family = "terminessnerdfontmono"
+style = "Regular"
 
 # Default colors
 [colors.primary]
