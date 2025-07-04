@@ -1,5 +1,5 @@
 typeset -U path PATH
-path=(~/bin ~/.local/bin ~/sources/bin ~/.cargo/bin $path)
+path=(~/bin ~/.local/bin ~/sources/bin ~/.cargo/bin ~/node_modules/.bin $path)
 export PATH
 export BROWSER="firefox-developer-edition"
 export EDITOR="nvim"
