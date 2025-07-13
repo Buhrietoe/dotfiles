@@ -3,16 +3,21 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    -- add any opts here
-    -- for example
-    provider = "ollama",
-    ollama = {
-      endpoint = "http://localhost:11434",
-      model = "qwen3:8b",
-      extra_request_body = {
-        think = false,
+    providers = {
+      ollama = {
+        endpoint = "http://localhost:11434",
+        -- model = "gemma3:12b",
+        -- model = "deepseek-r1:14b",
+        -- model = "mistral:7b",
+        -- model = "deepseek-r1:8b",
+        -- model = "qwen2.5-coder:7b",
+        model = "qwen3:8b",
+        extra_request_body = {
+          think = false,
+        },
       },
     },
+    provider = "ollama",
     auto_suggestions_provider = "ollama",
     cursor_applying_provider = "ollama",
     behavior = {},
@@ -26,7 +31,7 @@ return {
       auto_suggestions = true,
       jump_result_buffer_on_finish = true,
       auto_focus_on_diff_view = true,
-      enable_token_counting = false,
+      enable_token_counting = true,
     },
     mappings = {
       sidebar = {
@@ -66,13 +71,13 @@ return {
         },
       },
     },
-    {
-      -- Make sure to set this up properly if you have lazy=true
-      "MeanderingProgrammer/render-markdown.nvim",
-      opts = {
-        file_types = { "markdown", "Avante" },
-      },
-      ft = { "markdown", "Avante" },
-    },
+    --- {
+    ---   -- Make sure to set this up properly if you have lazy=true
+    ---   "MeanderingProgrammer/render-markdown.nvim",
+    ---   opts = {
+    ---     file_types = { "markdown", "Avante" },
+    ---   },
+    ---   ft = { "markdown", "Avante" },
+    --- },
   },
 }
