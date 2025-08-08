@@ -149,6 +149,8 @@ autoload -Uz compinit
 compinit
 zstyle :compinstall filename '${HOME}/.zshrc'
 
+zstyle ':completion:*:commands' rehash yes
+
 #- buggy
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
