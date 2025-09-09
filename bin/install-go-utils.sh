@@ -6,6 +6,7 @@ utils=(
     "github.com/Buhrietoe/httpdir@latest"
     "github.com/sheepla/gofind@latest"
     "github.com/claudiodangelis/qrcp@latest"
+    "github.com/charmbracelet/crush@latest"
 )
 
 for util in ${utils[@]}; do
