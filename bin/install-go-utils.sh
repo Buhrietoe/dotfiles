@@ -7,6 +7,7 @@ utils=(
     "github.com/sheepla/gofind@latest"
     "github.com/claudiodangelis/qrcp@latest"
     "github.com/charmbracelet/crush@latest"
+    "github.com/jesseduffield/lazygit@latest"
 )
 
 for util in ${utils[@]}; do
