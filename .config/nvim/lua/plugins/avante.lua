@@ -7,7 +7,6 @@ return {
       openai = {
         endpoint = "http://localhost:8080/v1",
         model = "gpt-oss:latest",
-
         extra_request_body = {
           think = false,
         },
