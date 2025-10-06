@@ -5,8 +5,9 @@ return {
   opts = {
     providers = {
       openai = {
-        endpoint = "http://localhost:8080/v1",
-        model = "gpt-oss:latest",
+        endpoint = "http://localhost:12434/v1",
+        model = "qwen2.5-coder-1.5b",
+
         extra_request_body = {
           think = false,
         },
