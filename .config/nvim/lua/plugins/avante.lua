@@ -6,7 +6,7 @@ return {
     providers = {
       openai = {
         endpoint = "http://localhost:12434/v1",
-        model = "qwen2.5-coder-1.5b",
+        model = "gpt-oss",
 
         extra_request_body = {
           think = false,
