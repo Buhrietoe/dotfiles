@@ -77,7 +77,7 @@ alias dp='nerdctl ps -a'
 # ShellFuncs
 #------------------------------
 # -- coloured manuals
-man() {
+function man() {
   env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
     LESS_TERMCAP_md=$(printf "\e[1;31m") \
@@ -90,7 +90,7 @@ man() {
 }
 
 # kubernetes namespace
-kn() {
+function kn() {
     kubectl config set-context --current --namespace=$1
 }
 
