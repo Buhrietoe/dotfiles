@@ -228,6 +228,9 @@ setprompt() {
 }
 setprompt
 
+# Prevent errors when glob patterns don't match locally
+setopt NONOMATCH
+
 # local system specific config
 [ -f ~/.zsh_local ] && . ~/.zsh_local
 
