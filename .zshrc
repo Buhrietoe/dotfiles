@@ -134,11 +134,36 @@ function gitlog() {
 
 # Manage ssh agent with keychain
 if [ -x "$(command -v keychain)" ]; then
-    for file in ~/.ssh/*; do
-        if [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"*"PRIVATE KEY-----" ]]; then
-            eval $(keychain -q --eval $file)
+    # Source the pidfile for faster environment setup in shells
+    # If pidfile doesn't exist, initialize keys and create pidfile
+    # Get hostname using zsh built-in or other reliable methods
+    if [[ -n "$HOST" ]]; then
+        HOSTNAME_VAR="$HOST"
+    elif [[ -n "$HOSTNAME" ]]; then
+        HOSTNAME_VAR="$HOSTNAME"
+    elif command -v uname >/dev/null 2>&1; then
+        HOSTNAME_VAR=$(uname -n)
+    else
+        HOSTNAME_VAR="unknown"
+    fi
+
+    if [ -f ~/.keychain/${HOSTNAME_VAR}-sh ]; then
+        . ~/.keychain/${HOSTNAME_VAR}-sh
+    else
+        # Dynamically detect private keys and use keychain 3 with systemd integration for better performance and less latency
+        ssh_keys=()
+        for file in ~/.ssh/id_*; do
+            if [[ -f "$file" ]] && [[ ! "$file" == *.pub ]] && [[ ! "$file" == *.old ]] && [[ $(head -n 1 "$file" 2>/dev/null) == "-----BEGIN"* ]]; then
+                # Get the key name without path or extension
+                key_name=$(basename "$file")
+                ssh_keys+=("$key_name")
+            fi
+        done
+
+        if [[ ${#ssh_keys[@]} -gt 0 ]]; then
+            eval $(keychain --quiet add --eval --systemd "${ssh_keys[@]}")
         fi
-    done
+    fi
 fi
 
 #------------------------------
