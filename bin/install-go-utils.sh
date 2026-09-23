@@ -6,6 +6,7 @@ utils=(
     "github.com/charmbracelet/crush@latest"
     "github.com/jesseduffield/lazygit@latest"
     "golang.org/x/tools/gopls@latest"
+    "github.com/mudler/nib@latest"
     #"github.com/containers/kubernetes-mcp-server/cmd/kubernetes-mcp-server@latest"
     #"github.com/Buhrietoe/todo-mcp@latest"
     #"github.com/f/mcptools/cmd/mcptools@latest"
