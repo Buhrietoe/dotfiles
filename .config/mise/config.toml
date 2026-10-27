@@ -1,8 +1,8 @@
 [tools]
 go = "latest"
+crush = "latest"
+lazygit = "latest"
 "go:github.com/Buhrietoe/httpdir" = "latest"
 "go:github.com/sheepla/gofind" = "latest"
-"go:github.com/charmbracelet/crush" = "latest"
-"go:github.com/jesseduffield/lazygit" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:github.com/mudler/nib" = "latest"
