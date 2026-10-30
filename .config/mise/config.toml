@@ -6,6 +6,10 @@ lazygit = "latest"
 "go:github.com/sheepla/gofind" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:github.com/mudler/nib" = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+
+[settings]
+minimum_release_age = "0s"
 
 [settings.upgrade]
 auto_prune = true
